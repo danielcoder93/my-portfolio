@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 
+import img1 from "../assets/largeWhite.png";
+
 import classes from "./Header.module.scss";
 import { Link } from "react-router-dom";
 
@@ -44,7 +46,9 @@ const Header = () => {
     <header className={classes.header}>
       <div className={classes.header__content}>
         <Link to="/" className={classes.header__content__logo}>
-          navbar
+          <div>
+            <img src={img1} alt="" />
+          </div>
         </Link>
         <nav
           className={`${classes.header__content__nav} ${

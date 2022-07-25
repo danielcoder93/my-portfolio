@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import PageOne from "./pages/PageOne";
 import PageTwo from "./pages/PageTwo";
 import PageThree from "./pages/PageThree";
-import PageCTA from "./pages/PageCTA";
+
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
         </Routes>
       </Layout>
     </BrowserRouter>
+
   );
 }
 
