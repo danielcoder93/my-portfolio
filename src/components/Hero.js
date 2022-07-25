@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Button, Typography } from "@mui/material";
-// import heroVideo from "../HeroVideo.mov";
+import heroVideo from "../assets/hero-header.mov";
 import classes from "./Hero.module.scss";
 
 const Hero = () => {
@@ -12,7 +12,7 @@ const Hero = () => {
         loop
         style={{ height: "100%", width: "100%", objectFit: "cover" }}
       >
-        {/* <source src={heroVideo} type="video/mp4" /> */}
+        <source src={heroVideo} type="video/mp4" />
       </video>
       <div className={classes.overlay}>
         <Box
