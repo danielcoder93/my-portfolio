@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 
-import img1 from ".//../images/largeWhite.png";
+import img1 from "../assets/largeWhite.png";
 
 import classes from "./Header.module.scss";
 import { Link } from "react-router-dom";

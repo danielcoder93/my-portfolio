@@ -1,0 +1,13 @@
+@import "./../styles/variables.scss";
+.section {
+  padding: 4rem 10rem;
+}
+
+.lighBg {
+  background-color: $bg;
+}
+.darkBg {
+  background-color: $dark;
+  color: $light;
+}
+
