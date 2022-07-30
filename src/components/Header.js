@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { BiMenuAltRight } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
-
+import clsx from "clsx";
 import img1 from "../assets/largeWhite.png";
 
 import classes from "./Header.module.scss";
@@ -13,6 +13,19 @@ const Header = () => {
   const [size, setSize] = useState({
     width: undefined,
     height: undefined,
+  });
+  const [isSticky, setSticky] = useState(false);
+  const setIsSticky = () => {
+    const scrollTop = window.scrollY;
+    console.log(scrollTop);
+    scrollTop > 0 ? setSticky(true) : setSticky(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", setIsSticky);
+    return () => {
+      window.removeEventListener("scroll", setIsSticky);
+    };
   });
 
   useEffect(() => {
@@ -43,7 +56,12 @@ const Header = () => {
   };
 
   return (
-    <header className={classes.header}>
+    <header
+      className={clsx(
+        classes.header,
+        isSticky ? classes.sticky : classes.notSticky
+      )}
+    >
       <div className={classes.header__content}>
         <Link to="/" className={classes.header__content__logo}>
           <div>

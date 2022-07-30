@@ -24,7 +24,7 @@ const Hero = () => {
           color="#fff"
         >
           <Typography variant="h3" component="h1" className={classes.title}>
-            BUIDLING QUAILITY WEBSITES IN A TIMELY FASHION
+            BUILDING QUALITY WEBSITES IN A TIMELY FASHION
           </Typography>
           <br></br>
           <h3>
