@@ -1,0 +1,11 @@
+.pageSpacing {
+  padding: 8rem 0 2rem 0;
+
+  @media only screen and (min-width: 900px) {
+    padding: 8rem 0 2rem 0;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    padding: 8rem 0 1rem 0;
+  }
+}

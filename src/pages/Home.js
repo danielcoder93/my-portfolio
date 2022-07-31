@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <Section bg="dark">
+      <Section bg="light">
         <p>
           Where does it come from? Contrary to popular belief, Lorem Ipsum is
           not simply random text. It has roots in a piece of classical Latin

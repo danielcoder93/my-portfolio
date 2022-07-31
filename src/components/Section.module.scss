@@ -1,6 +1,14 @@
 @import "./../styles/variables.scss";
 .section {
-  padding: 4rem 10rem;
+  padding: 0 1rem;
+  
+  @media only screen and (min-width: 900px) {
+    padding: 4rem 5rem;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    padding: 4rem 10rem;
+  }
 }
 
 .lighBg {
@@ -10,4 +18,3 @@
   background-color: $dark;
   color: $light;
 }
-
