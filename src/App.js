@@ -1,10 +1,9 @@
 import Layout from "./components/Layout";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import PageOne from "./pages/PageOne";
-import PageTwo from "./pages/PageTwo";
+import Projects from "./pages/Projects";
+import CaseStudyPage from "./pages/CaseStudyPage";
 import PageThree from "./pages/PageThree";
-
 
 function App() {
   return (
@@ -12,13 +11,15 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/page-one" element={<PageOne />} />
-          <Route path="/page-two" element={<PageTwo />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route
+            path="/value-lock-vip"
+            element={<CaseStudyPage title="Value Lock Vip" />}
+          />
           <Route path="/page-three" element={<PageThree />} />
         </Routes>
       </Layout>
     </BrowserRouter>
-
   );
 }
 
