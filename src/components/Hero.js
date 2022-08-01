@@ -3,6 +3,7 @@ import { Box, Button, Typography } from "@mui/material";
 import heroVideo from "../assets/hero-header.mov";
 import classes from "./Hero.module.scss";
 
+
 const Hero = () => {
   return (
     <section className={classes.section}>
