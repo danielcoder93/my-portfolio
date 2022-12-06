@@ -11,14 +11,14 @@ const Projects = () => {
           typeOfProject="WEB DEVELOPMENT"
           title="Value Lock Vip"
           link="/value-lock-vip"
-          image="/testimage"
+          image="/../public/testimage.jpeg"
           imageAlt="this is a test"
         />
         <ProjectItem
           typeOfProject="WORDPRESS"
           title="Dusk RE"
           link="/dusk-re"
-          image="/duskre"
+          image="/../public/dusk-re.png"
           imageAlt="Dusk RE website"
         />
       </Section>

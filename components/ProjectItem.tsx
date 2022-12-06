@@ -2,6 +2,7 @@ import { Grid } from "@mui/material";
 import Link from "next/link";
 import classes from "../styles/ProjectItem.module.scss";
 import { FC } from "react";
+import Image from "next/image";
 
 const ProjectItem: FC<{
   title: string;
@@ -28,9 +29,17 @@ const ProjectItem: FC<{
         </div>
       </Grid>
       <Grid item xs={12} md={8}>
-        <img className={classes.projectItemImage} src={image} alt={imageAlt} />
+        <Image
+          className={classes.projectItemImage}
+          src={image}
+          alt={imageAlt}
+          width="0"
+          height="0"
+          sizes="100vw"
+          style={{ width: "100%", height: "auto" }}
+        />
       </Grid>
-    </Grid> 
+    </Grid>
   );
 };
 
