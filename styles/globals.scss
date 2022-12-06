@@ -8,6 +8,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
 }
 
 body {
@@ -15,8 +16,10 @@ body {
   width: 100%;
   font-family: $Poppins;
   color: $dark;
+  background-color: $bg;
 
-  h1, h2, h3 {
+
+  h1 {
     text-align: center;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
@@ -25,7 +28,6 @@ body {
   font-family: "Montserrat", "sans-serif";
   line-height: 2rem;
 }
-
 
 #root {
   height: 100%;

@@ -9,7 +9,12 @@ const Hero = () => {
         autoPlay
         muted
         loop
-        style={{ height: "100%", width: "100%", objectFit: "cover" }}
+        style={{
+          height: "100%",
+          width: "100%",
+          objectFit: "cover",
+          borderRadius: "30px",
+        }}
       >
         <source src="./hero-header.mov" type="video/mp4" />
       </video>
