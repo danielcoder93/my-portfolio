@@ -1,9 +1,12 @@
 import React from "react";
-
+import SectionOne from "../components/SectionOne";
 function Dusk() {
   return (
     <div>
-      <h1>test</h1>dusk-re
+      <SectionOne 
+      title="Dusk RE"
+      text="test"
+      /> 
     </div>
   );
 }

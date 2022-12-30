@@ -1,0 +1,19 @@
+@import "./variables.scss";
+.lineSpacing {
+    line-height: 1.6;
+}
+.accordionDetails {
+    
+}
+.paddingBtm {
+    padding-bottom: 2rem;
+}
+.accordionSummary {
+    
+}
+.accordion {
+    box-shadow: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: $bg;
+}

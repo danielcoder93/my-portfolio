@@ -15,9 +15,9 @@ const Projects = () => {
           imageAlt="this is a test"
         />
         <ProjectItem
-          typeOfProject="WORDPRESS"
+          typeOfProject="Real Estate Company"
           title="Dusk RE"
-          link="/dusk-re"
+          link="/Dusk"
           image="/../public/dusk-re.png"
           imageAlt="Dusk RE website"
         />

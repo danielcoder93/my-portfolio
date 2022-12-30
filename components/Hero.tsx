@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Button, Typography } from "@mui/material";
 import classes from "../styles/Hero.module.scss";
+import { padding } from "@mui/system";
 
 const Hero = () => {
   return (
@@ -26,18 +27,20 @@ const Hero = () => {
           justifyContent="center"
           alignItems="center"
           color="#fff"
+          paddingX={10}
+          
         >
-          <Typography variant="h3" component="h1" className={classes.title}>
+          <Typography variant="h3" component="h1" className={classes.title} paddingBottom={7}>
             BUILDING QUALITY WEBSITES IN A TIMELY FASHION
           </Typography>
-          <br />
-          <h3>
+
+          <h3 style={{ textAlign: "center", paddingBottom: '7rem' }} >
             Manage your business with an easy-to-use website that converts
-            visitors to customers, and displays your brand with the respect it
-            deserves.
+            visitors to customers/clients, and displays your brand with the
+            respect it deserves.
           </h3>
           <div>
-            <Button color="primary" variant="contained">
+            <Button size="large" color="primary" variant="contained">
               VIEW OUR WORK
             </Button>
           </div>
