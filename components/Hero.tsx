@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Button, Typography } from "@mui/material";
 import classes from "../styles/Hero.module.scss";
-import { padding } from "@mui/system";
 
 const Hero = () => {
   return (

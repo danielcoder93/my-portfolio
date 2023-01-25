@@ -19,7 +19,7 @@ const HowWeWork = () => {
           <p>
             We would love to work with you, but we understand that you may have
             additional questions. This quick Q&A covers a lot of the basics. If
-            you have any further questions, don't hesitate to reach out.
+            you have any further questions, don&apos;t hesitate to reach out.
           </p>
         </Grid>
         <Grid item xs={12} md={8}>
@@ -127,7 +127,20 @@ const ControlledAccordions = () => {
           </Typography>
         </MuiAccordionSummary>
         <AccordionDetails className={classes.accordionDetails}>
-          <Typography>We know</Typography>
+          <Typography>
+            At Created Revolution, we pride ourselves on being different from
+            any other web agency. We are results-driven, meaning that our focus
+            is on helping our clients achieve their specific business goals
+            through their website. We understand that responsiveness is critical
+            in today&apos;s fast-paced digital world, and we make it a priority
+            always to be available to our clients and quickly address any issues
+            that may arise. We don&apos;t just do the bare minimum - we go the
+            extra mile to ensure that our clients are delighted with the work we
+            do for them. Our team contains experts with years of experience in
+            the industry, and we have a proven track record of success working
+            with companies like Walmart. Trust us to take your online presence
+            to the next level.
+          </Typography>
         </AccordionDetails>
       </Accordion>
     </div>

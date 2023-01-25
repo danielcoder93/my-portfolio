@@ -91,13 +91,13 @@ const NavComponent: FC<{
           </Link>
         </li>
         <li>
-          <Link href="/page-two" onClick={menuToggleHandler}>
-            PageTwo
+          <Link href="/aboutus" onClick={menuToggleHandler}>
+            About Us
           </Link>
         </li>
         <li>
-          <Link href="/page-three" onClick={menuToggleHandler}>
-            PageThree
+          <Link href="/ContactUs" onClick={menuToggleHandler}>
+            CONTACT US
           </Link>
         </li>
       </ul>

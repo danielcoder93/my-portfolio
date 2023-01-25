@@ -4,6 +4,19 @@ import Hero from "../components/Hero";
 import Classes from "../styles/Home.module.scss";
 import HowWeWork from "../components/SectionHowWork";
 import { Grid } from "@mui/material";
+import Carousel from "react-material-ui-carousel";
+import { Paper, Button } from "@mui/material";
+
+const items = [
+  {
+    name: "DUSK RE",
+    description: "Probably the most random thing you have ever seen!",
+  },
+  {
+    name: "VIP SPORTS",
+    description: "Hello World!",
+  },
+];
 
 const Home = () => {
   return (
@@ -14,6 +27,7 @@ const Home = () => {
           container
           spacing={"1rem"}
           direction="row"
+          text-align="center"
           alignItems="center"
           justifyContent="center"
           padding={"2rem 0"}
@@ -72,9 +86,27 @@ const Home = () => {
           hands from start to finish.
         </p>
       </Section>
+      <Section bg="light">
+        <Carousel>
+          {items.map((item, i) => (
+            <Item key={i} item={item} />
+          ))}
+        </Carousel>
+      </Section>
       <HowWeWork />
     </>
   );
 };
+
+function Item(props: any) {
+  return (
+    <Paper>
+      <h2>{props.item.name}</h2>
+      <p>{props.item.description}</p>
+
+      <Button className="CheckButton">Check it out!</Button>
+    </Paper>
+  );
+}
 
 export default Home;
