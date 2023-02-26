@@ -86,18 +86,18 @@ const NavComponent: FC<{
     >
       <ul className={classes.header}>
         <li>
-          <Link href="/Projects" onClick={menuToggleHandler}>
+          <Link href="/projects" onClick={menuToggleHandler}>
             Projects
           </Link>
         </li>
         <li>
           <Link href="/aboutus" onClick={menuToggleHandler}>
-            About Us
+            About us
           </Link>
         </li>
         <li>
-          <Link href="/ContactUs" onClick={menuToggleHandler}>
-            CONTACT US
+          <Link href="/contact-us" onClick={menuToggleHandler}>
+            Contact us
           </Link>
         </li>
       </ul>
