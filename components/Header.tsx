@@ -18,7 +18,7 @@ const Header = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", setIsSticky);
+    window.addEventListener("scroll", setIsSticky); 
     return () => {
       window.removeEventListener("scroll", setIsSticky);
     };
@@ -43,6 +43,14 @@ const Header = () => {
     setMenuOpen(false);
   };
 
+  let navStyle = ""
+  if(width < 768 && menuOpen){
+    navStyle = classes.isMenuOpen 
+  }
+  if(width < 768 && !menuOpen){
+   navStyle = classes.isMenuNotOpen
+  }
+
   return (
     <header
       className={clsx(
@@ -59,7 +67,7 @@ const Header = () => {
 
         <NavComponent
           menuToggleHandler={menuToggleHandler}
-          extraClasses={width < 768 && menuOpen ? classes.isMenuOpen : ""}
+          extraClasses={navStyle}
         />
         <div className={classes.header__content__toggle}>
           {!menuOpen ? (
