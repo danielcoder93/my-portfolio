@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [width, setWidth] = useState(50);
+  const [width, setWidth] = useState(0);
   const [isSticky, setSticky] = useState(false);
 
   const setIsSticky = () => {
@@ -18,7 +18,10 @@ const Header = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", setIsSticky); 
+    setWidth(window.innerWidth);
+  }, []);
+  useEffect(() => {
+    window.addEventListener("scroll", setIsSticky);
     return () => {
       window.removeEventListener("scroll", setIsSticky);
     };
@@ -29,27 +32,25 @@ const Header = () => {
       setWidth(window.innerWidth);
     };
     window.addEventListener("resize", handleResize);
+    if (width > 768) {
+      setMenuOpen(true);
+    }
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  useEffect(() => {
-    if (width > 768 && menuOpen) {
-      setMenuOpen(false);
-    }
-  }, [width, menuOpen]);
 
   const menuToggleHandler = () => {
     setMenuOpen(false);
   };
 
-  let navStyle = ""
-  if(width < 768 && menuOpen){
-    navStyle = classes.isMenuOpen 
+  let navStyle = "";
+  if (width < 768 && menuOpen) {
+    navStyle = classes.isMenuOpen;
   }
-  if(width < 768 && !menuOpen){
-   navStyle = classes.isMenuNotOpen
+  if (width < 768 && !menuOpen) {
+    navStyle = classes.isMenuNotOpen;
   }
+
 
   return (
     <header
