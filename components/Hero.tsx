@@ -30,7 +30,7 @@ const Hero = () => {
           
         >
           <Typography variant="h3" component="h1" className={classes.title} paddingBottom={7}>
-            BUILDING QUALITY WEBSITES IN A TIMELY FASHION
+          Transforming ideas into digital solutions - one line of code at a time.
           </Typography>
 
           <h3 style={{ textAlign: "center", paddingBottom: '7rem' }} >
@@ -40,7 +40,7 @@ const Hero = () => {
           </h3>
           <div>
             <Button size="large" color="primary" variant="contained">
-              VIEW OUR WORK
+              VIEW MY WORK
             </Button>
           </div>
         </Box>

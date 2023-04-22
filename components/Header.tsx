@@ -51,7 +51,6 @@ const Header = () => {
     navStyle = classes.isMenuNotOpen;
   }
 
-
   return (
     <header
       className={clsx(
