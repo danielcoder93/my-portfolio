@@ -39,7 +39,7 @@ const Hero = () => {
             respect it deserves.
           </h3>
           <div>
-            <Button size="large" color="primary" variant="contained">
+            <Button size="large" variant="contained" className={classes.button}>
               VIEW MY WORK
             </Button>
           </div>

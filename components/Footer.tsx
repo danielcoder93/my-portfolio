@@ -1,9 +1,6 @@
 import styles from "../styles/Footer.module.scss";
-import {
-  AiFillGithub,
-  AiFillLinkedin,
-  AiOutlineCodeSandbox,
-} from "react-icons/ai";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 const Footer = () => {
   return (
     <footer>
@@ -12,13 +9,10 @@ const Footer = () => {
       </div>
       <nav className={styles.footerRow}>
         <a>
-          <AiFillGithub />
+          <GitHubIcon />
         </a>
         <a>
-          <AiFillLinkedin />
-        </a>
-        <a>
-          <AiOutlineCodeSandbox />
+          <LinkedInIcon />
         </a>
       </nav>
     </footer>

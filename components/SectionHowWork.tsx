@@ -4,7 +4,7 @@ import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import classes from "../styles/SectionHowWork.module.scss";
 import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import * as React from "react";
 
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
