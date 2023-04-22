@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 .section {
   width: 85%;
   height: 85vh;
@@ -17,4 +19,12 @@
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 30px;
 
+}
+
+.button {
+  background-color: $primary;
+}
+
+.button:hover {
+  background-color: $primary-darker;
 }

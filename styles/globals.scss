@@ -33,9 +33,25 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  padding-bottom: .8rem;
 }
 
 #root {
   height: 100%;
   width: 100%;
+}
+
+a {
+  color: $dark;
+  text-underline-offset: 10px;
+}
+
+a:hover {
+  color: $primary;
 }

@@ -3,12 +3,13 @@ import clsx from "clsx";
 
 import classes from "../styles/Section.module.scss";
 
-const Section: FC<{ children: ReactNode; bg: string }> = ({ children, bg }) => {
+const Section: FC<{ children: ReactNode; bg: string, className?: string }> = ({ children, bg, className }) => {
   return (
     <section
       className={clsx(
         classes.section,
-        bg === "light" ? classes.lightBg : classes.darkBg
+        bg === "light" ? classes.lightBg : classes.darkBg,
+        className && className
       )}
     >
       {children}

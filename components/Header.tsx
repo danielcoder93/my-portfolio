@@ -1,8 +1,8 @@
 import React, { useEffect, useState, FC } from "react";
 import black from "../public/black.png";
 import Image from "next/image";
-import { BiMenuAltRight } from "react-icons/bi";
-import { AiOutlineClose } from "react-icons/ai";
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import clsx from "clsx";
 import classes from "../styles/Header.module.scss";
 import Link from "next/link";
@@ -51,7 +51,6 @@ const Header = () => {
     navStyle = classes.isMenuNotOpen;
   }
 
-
   return (
     <header
       className={clsx(
@@ -72,9 +71,9 @@ const Header = () => {
         />
         <div className={classes.header__content__toggle}>
           {!menuOpen ? (
-            <BiMenuAltRight onClick={() => setMenuOpen(true)} />
+            <MenuIcon onClick={() => setMenuOpen(true)} />
           ) : (
-            <AiOutlineClose onClick={() => setMenuOpen(false)} />
+            <CloseIcon onClick={() => setMenuOpen(false)} />
           )}
         </div>
       </div>
