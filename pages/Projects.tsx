@@ -6,19 +6,31 @@ import Page from "../components/Page";
 const Projects = () => {
   return (
     <Page title="Projects">
+     
       <Section bg="light">
+         <h3>
+        Here at created revolution we are dedicated to delivering exceptional
+        value to our clients through our unparalleled service and expertise.
+      </h3>
         <ProjectItem
           typeOfProject="WEB DEVELOPMENT"
           title="Value Lock Vip"
           link="/value-lock-vip"
-          image="/../public/testimage.jpeg"
-          imageAlt="this is a test"
+          image="/../public/duskfull.png"
+          imageAlt="Dusk images"
         />
         <ProjectItem
           typeOfProject="Real Estate Company"
           title="Dusk RE"
           link="/Dusk"
-          image="/../public/dusk-re.png"
+          image="/../public/vipfull.png"
+          imageAlt="VIP Sports website images"
+        />
+        <ProjectItem
+          typeOfProject="Lodging"
+          title="ADK Preserve"
+          link="/ADKpreserve"
+          image="/../public/adkfull.png"
           imageAlt="Dusk RE website"
         />
       </Section>
