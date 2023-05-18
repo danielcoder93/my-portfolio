@@ -6,15 +6,22 @@ import HowWeWork from "../components/SectionHowWork";
 import { Grid } from "@mui/material";
 import Carousel from "react-material-ui-carousel";
 import { Paper, Button } from "@mui/material";
+import Link from "next/link";
 
-const items = [
+type Item = { name: string; description: string; link: string };
+
+const items: Array<Item> = [
   {
     name: "DUSK RE",
-    description: "Probably the most random thing you have ever seen!",
+    description:
+      "I couldn't be happier with the website that was created for my business by this web agency. After launching our new website, we received numerous compliments from potential clients, and many of them were asking us why we weren't already working together. The website perfectly represented our brand, and the functionality and user experience were top-notch. The team was incredibly professional and easy to work with throughout the entire process. I would highly recommend this web agency to any business owner looking for a high-quality website that will elevate their brand and drive conversions.",
+    link: "/Dusk",
   },
   {
     name: "VIP SPORTS",
-    description: "Hello World!",
+    description:
+      "I am so grateful for the website that was created for my business by this web agency. The team truly listened to my needs and developed a website that perfectly represented my brand and showcased my products. The website is easy to navigate, and the user experience is excellent. The best part is that the website has freed up so much of my time, allowing me to focus on other aspects of my business. I no longer have to worry about maintaining a website or troubleshooting technical issues. The team at this web agency has truly exceeded my expectations, and I would highly recommend them to anyone looking for a high-quality website that will help grow their business.",
+    link: "/value-lock-vip",
   },
 ];
 
@@ -28,8 +35,7 @@ const Home = () => {
           spacing={"1rem"}
           direction="row"
           text-align="center"
-          alignItems="center"
-          justifyContent="center"
+          align-items="center"
           padding={"2rem 0"}
         >
           <Grid item xs={12} md={6} lg={3}>
@@ -67,7 +73,7 @@ const Home = () => {
           </Grid>
         </Grid>
       </Section>
-      <Section bg="light">
+      {/* <Section bg="light">
         <p>
           As a web agency, we are committed to delivering the highest quality
           products and services to your clients. Our team of professionals is
@@ -85,11 +91,11 @@ const Home = () => {
           With our agency, clients can trust that their website will be in good
           hands from start to finish.
         </p>
-      </Section>
+      </Section> */}
       <Section bg="light">
         <Carousel>
-          {items.map((item, i) => (
-            <Item key={i} item={item} />
+          {items.map((item) => (
+            <Item key={item.name} {...item} />
           ))}
         </Carousel>
       </Section>
@@ -98,14 +104,14 @@ const Home = () => {
   );
 };
 
-function Item(props: any) {
+function Item(item: Item) {
   return (
-    <Paper>
-      <h2>{props.item.name}</h2>
-      <p>{props.item.description}</p>
+    <Section bg="light">
+      <h2>{item.name}</h2>
+      <p>{item.description}</p>
 
-      <Button className="CheckButton">Check it out!</Button>
-    </Paper>
+      <Link href={item.link}>View Case Study</Link>
+    </Section>
   );
 }
 

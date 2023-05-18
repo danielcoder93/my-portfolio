@@ -26,17 +26,16 @@ const Hero = () => {
           justifyContent="center"
           alignItems="center"
           color="#fff"
-          paddingX={10}
+          paddingX={6}
           
         >
           <Typography variant="h3" component="h1" className={classes.title} paddingBottom={7}>
-          Transforming ideas into digital solutions - one line of code at a time.
+          Transforming ideas into digital solutions
           </Typography>
 
           <h3 style={{ textAlign: "center", paddingBottom: '7rem' }} >
             Manage your business with an easy-to-use website that converts
-            visitors to customers/clients, and displays your brand with the
-            respect it deserves.
+            visitors to customers/clients
           </h3>
           <div>
             <Button size="large" variant="contained" className={classes.button}>

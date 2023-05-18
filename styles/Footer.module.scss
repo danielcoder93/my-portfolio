@@ -1,5 +1,17 @@
+@import "./variables.scss";
 .footerRow {
+    border: none;
+  border-top: 1px solid black;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    align-items: flex-start;
+    padding: 5px;
 }
+
+
+  .contactContainer {
+    padding-top: 10px;
+    padding-left: 10%;
+  }
+  .logo {
+    padding-left: 5px;
+  }
