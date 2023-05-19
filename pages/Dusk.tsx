@@ -43,8 +43,8 @@ function Dusk() {
         body: `Dusk Group is an innovative real estate company founded by Uriel
     Setareh and Kevin Darouvar in 2022. The company provides real estate
     services to individuals, family offices, corporations, and
-    institutions. The company&apos;s mission is to determine and implement
-    quality real estate solutions tailored to its client&apos;s needs. The
+    institutions. The company mission is to determine and implement
+    quality real estate solutions tailored to its clients needs. The
     company prides itself on prioritizing the relationships it builds with
     its clients, offering the same standard of professionalism and
     attention, regardless of deal size. The company approached our web
@@ -66,13 +66,13 @@ function Dusk() {
       leftsolution={{
         title: "Solution",
         body: `   Our web agency utilized a combination of WordPress and React
-        to develop a custom solution for Dusk Group&apos;s challenge
+        to develop a custom solution for Dusk Group challenge
         of creating a highly customized website that effectively
         showcased their real estate services. In addition, we worked
         closely with Dusk Group to create an engaging and visually
         appealing website with a user-friendly interface optimized for
         search engines. Our custom solution was tailored to Dusk
-        Group&apos;s specific needs and preferences, resulting in a
+        Group's specific needs and preferences, resulting in a
         highly effective and successful website. The website&apos;s
         search engine optimization efforts led to increased visibility
         and traffic, resulting in more conversions and revenue. The
@@ -82,14 +82,14 @@ function Dusk() {
       leftresults={{
         title: "Results",
         body: ` The website we created for Dusk Group achieved the
-        company&apos;s goals and objectives. The website was highly
+        company's goals and objectives. The website was highly
         engaging, attracting potential clients and effectively
-        showcasing the company&apos;s real estate services. In
-        addition, the website&apos;s design and user interface
+        showcasing the company's real estate services. In
+        addition, the website's design and user interface
         enhanced the user experience, increasing engagement and
         customer satisfaction. The company has reported a significant
         increase in the number of clients, which has led to a rise in
-        revenue. Additionally, the website&apos;s search engine
+        revenue. Additionally, the website's search engine
         optimization efforts have increased visibility and traffic,
         leading to more conversions and revenue.`,
       }}
