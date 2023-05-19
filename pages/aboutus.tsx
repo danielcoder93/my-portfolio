@@ -9,7 +9,6 @@ const AboutUs = () => {
   return (
     <Page title="About us">
       <Section bg="light">
-       
         <div>
           {/* <p>
           Our agency is committed to providing our clients with the highest
@@ -25,16 +24,15 @@ const AboutUs = () => {
           brand, we&apos;re here to help. You can trust us to give you the
           support and guidance you need to succeed.
         </p> */}
-        <div className={classes.imagecontainer}>
-          <Image
-            src="/dancamila.png"
-            alt="Picture of daniel coder and camila Coder"
-            width="0"
-            height="0"
-            sizes="90vw"
-            style={{ width: "auto", height: "auto" }}
-            
-          />
+          <div className={classes.imagecontainer}>
+            <Image
+              src="/dancamila.png"
+              alt="Picture of daniel coder and camila Coder"
+              width="0"
+              height="0"
+              sizes="90vw"
+              style={{ width: "auto", height: "auto" }}
+            />
           </div>
           <h2>Camila Coder</h2>
 
