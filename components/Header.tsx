@@ -1,8 +1,8 @@
 import React, { useEffect, useState, FC } from "react";
 import black from "../public/black.png";
 import Image from "next/image";
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import clsx from "clsx";
 import classes from "../styles/Header.module.scss";
 import Link from "next/link";
@@ -94,7 +94,7 @@ const NavComponent: FC<{
     >
       <ul className={classes.header}>
         <li>
-          <Link href="/projects" onClick={menuToggleHandler}>
+          <Link href="/allprojects" onClick={menuToggleHandler}>
             Projects
           </Link>
         </li>
