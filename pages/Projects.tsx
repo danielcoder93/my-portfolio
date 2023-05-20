@@ -2,7 +2,9 @@ import React from "react";
 import Section from "../components/Section";
 import ProjectItem from "../components/ProjectItem";
 import Page from "../components/Page";
-// import duskre from "/public/dusk-re"
+import duskre from "../public/duskfull.png";
+import vls from "../public/vipfull.png";
+import adk from "../public/adkfull.png";
 
 const Projects = () => {
   return (
@@ -16,22 +18,22 @@ const Projects = () => {
           typeOfProject="WEB DEVELOPMENT"
           title="Value Lock Vip"
           link="/value-lock-vip"
-          image="/duskfull.png"
-          imageAlt="Dusk images"
+          image={vls}
+          imageAlt="Value lock vip"
         />
         <ProjectItem
           typeOfProject="Real Estate Company"
           title="Dusk RE"
-          link="/Dusk"
-          image="/vipfull.png"
-          imageAlt="VIP Sports website images"
+          link="/dusk"
+          image={duskre}
+          imageAlt="dusk re"
         />
         <ProjectItem
           typeOfProject="Lodging"
           title="ADK Preserve"
-          link="/ADKpreserve"
-          image="/adkfull.png"
-          imageAlt="Dusk RE website"
+          link="/adk-preserve"
+          image={adk}
+          imageAlt="ADL Preserve"
         />
       </Section>
     </Page>
