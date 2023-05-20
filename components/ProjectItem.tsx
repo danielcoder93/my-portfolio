@@ -8,10 +8,11 @@ const ProjectItem: FC<{
   title: string;
   typeOfProject: string;
   link: string;
-  image: string;
+  image: any;
   imageAlt: string;
 }> = (props) => {
   const { title, typeOfProject, link, image, imageAlt } = props;
+
   return (
     <Grid
       container
