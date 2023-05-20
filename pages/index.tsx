@@ -15,7 +15,7 @@ const items: Array<Item> = [
     name: "DUSK RE",
     description:
       "I couldn't be happier with the website that was created for my business by this web agency. After launching our new website, we received numerous compliments from potential clients, and many of them were asking us why we weren't already working together. The website perfectly represented our brand, and the functionality and user experience were top-notch. The team was incredibly professional and easy to work with throughout the entire process. I would highly recommend this web agency to any business owner looking for a high-quality website that will elevate their brand and drive conversions.",
-    link: "/dusk",
+    link: "/duskre",
   },
   {
     name: "VIP SPORTS",

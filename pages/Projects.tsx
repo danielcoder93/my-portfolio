@@ -24,14 +24,14 @@ const Projects = () => {
         <ProjectItem
           typeOfProject="Real Estate Company"
           title="Dusk RE"
-          link="/dusk"
+          link="/duskre"
           image={duskre}
           imageAlt="dusk re"
         />
         <ProjectItem
           typeOfProject="Lodging"
           title="ADK Preserve"
-          link="/adk-preserve"
+          link="/adkpreserve"
           image={adk}
           imageAlt="ADL Preserve"
         />
