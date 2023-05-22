@@ -14,29 +14,29 @@
 body {
   box-sizing: border-box;
   width: 100%;
-  font-family: $Poppins;
-  color: $dark;
+  font-family: "Poppins";
+  color: $dark-color;
   background-color: $bg;
 
 
   h1 {
     text-align: center;
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", "Helvetica";
     font-weight: 500;
     font-size: 3rem;
   }
-  font-family: "Montserrat", "sans-serif";
+  font-family: "Montserrat", "Helvetica";
   line-height: 2rem;
 }
 h2 {
   
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", "sans-serif";
   font-weight: 500;
   font-size: 1.5rem;
   padding-bottom: 1rem;
 }
 h3 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", "Helvetica";
   font-weight: 500;
   font-size: 1rem;
   padding-bottom: .8rem;
@@ -48,7 +48,7 @@ h3 {
 }
 
 a {
-  color: $dark;
+  color: $dark-color;
   text-underline-offset: 10px;
 }
 
