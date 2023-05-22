@@ -60,6 +60,7 @@ $border: 7px;
       align-items: center;
       text-align: center;
       color: $light;
+      
 
       @include breakpoint(md) {
         color: $dark-color;
@@ -95,6 +96,7 @@ $border: 7px;
             padding: 0.75rem 1.25rem;
             border-radius: $borderRadius;
             transition: 0.3s ease all;
+            font-family: "Montserrat", "sans-serif";
 
             &:hover {
               background: rgba($light, 0.1);

@@ -1,8 +1,8 @@
 import React, { useEffect, useState, FC } from "react";
 import black from "../public/black.png";
 import Image from "next/image";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import clsx from "clsx";
 import classes from "../styles/Header.module.scss";
 import Link from "next/link";
@@ -86,7 +86,12 @@ const NavComponent: FC<{
   extraClasses?: string;
 }> = ({ menuToggleHandler, extraClasses }) => {
   return (
-    <nav className={clsx(classes.header__content__nav, extraClasses)}>
+    <nav
+      className={clsx(
+        classes.header__content__nav,
+        extraClasses && extraClasses
+      )}
+    >
       <ul className={classes.header}>
         <li>
           <Link href="/allprojects" onClick={menuToggleHandler}>

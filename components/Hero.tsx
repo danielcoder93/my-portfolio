@@ -33,13 +33,13 @@ const Hero = () => {
           Transforming ideas into digital solutions
           </Typography>
 
-          <h3 style={{ textAlign: "center", paddingBottom: '7rem' }} >
+          <h3 style={{ textAlign: "center" }} >
             Manage your business with an easy-to-use website that converts
             visitors to customers/clients
           </h3>
           <div>
             <Button size="large" variant="contained" className={classes.button}>
-              VIEW MY WORK
+              VIEW OUR WORK
             </Button>
           </div>
         </Box>
