@@ -86,12 +86,7 @@ const NavComponent: FC<{
   extraClasses?: string;
 }> = ({ menuToggleHandler, extraClasses }) => {
   return (
-    <nav
-      className={clsx(
-        classes.header__content__nav,
-        extraClasses && extraClasses
-      )}
-    >
+    <nav className={clsx(classes.header__content__nav, extraClasses)}>
       <ul className={classes.header}>
         <li>
           <Link href="/allprojects" onClick={menuToggleHandler}>
