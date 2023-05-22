@@ -14,7 +14,7 @@
 body {
   box-sizing: border-box;
   width: 100%;
-  font-family: "Poppins";
+  font-family: $Poppins;
   color: $dark-color;
   background-color: $bg;
 
@@ -30,13 +30,13 @@ body {
 }
 h2 {
   
-  font-family: "Poppins", "sans-serif";
+  font-family: "Poppins";
   font-weight: 500;
   font-size: 1.5rem;
   padding-bottom: 1rem;
 }
 h3 {
-  font-family: "Poppins", "Helvetica";
+  font-family: "Poppins";
   font-weight: 500;
   font-size: 1rem;
   padding-bottom: .8rem;
