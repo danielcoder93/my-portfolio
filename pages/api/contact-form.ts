@@ -2,6 +2,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer"; // Import nodemailer
 
+interface ResponseData {
+  ok: boolean;
+  name: string;
+}
 const transporter = nodemailer.createTransport({
   // Set up your email transporter configuration
   service: "hotmail",
@@ -39,10 +43,10 @@ export default async function handler(
 
     await transporter.sendMail(mailOptions);
     res.status(200);
-    res.json({ ok: true });
+    res.json({ ok: true, name: "Example" } as ResponseData);
   } catch (e) {
     console.log("Failed to send email response:", e);
     res.status(400);
-    res.json({ ok: false });
+    res.json({ ok: false, name: "Example" } as ResponseData);
   }
 }
