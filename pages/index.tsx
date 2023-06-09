@@ -7,23 +7,58 @@ import { Grid } from "@mui/material";
 import Carousel from "react-material-ui-carousel";
 import { Paper, Button } from "@mui/material";
 import Link from "next/link";
-
-type Item = { name: string; description: string; link: string };
+import Image from "next/image";
+import dusk from "../public/Dusktest.png";
+import value from "../public/valuetest.png";
+import { StaticImageData } from "next/image";
+type Item = {
+  image: StaticImageData;
+  imageAlt: string;
+  name: string;
+  description: string;
+  link: string;
+};
 
 const items: Array<Item> = [
   {
+    image: dusk,
+    imageAlt: "DUSK RE Logo",
     name: "DUSK RE",
     description:
       "I couldn't be happier with the website that was created for my business by this web agency. After launching our new website, we received numerous compliments from potential clients, and many of them were asking us why we weren't already working together. The website perfectly represented our brand, and the functionality and user experience were top-notch. The team was incredibly professional and easy to work with throughout the entire process. I would highly recommend this web agency to any business owner looking for a high-quality website that will elevate their brand and drive conversions.",
     link: "/duskre",
   },
   {
+    image: value,
+    imageAlt: "VIP SPORTS Logo",
     name: "VIP SPORTS",
     description:
       "I am so grateful for the website that was created for my business by this web agency. The team truly listened to my needs and developed a website that perfectly represented my brand and showcased my products. The website is easy to navigate, and the user experience is excellent. The best part is that the website has freed up so much of my time, allowing me to focus on other aspects of my business. I no longer have to worry about maintaining a website or troubleshooting technical issues. The team at this web agency has truly exceeded my expectations, and I would highly recommend them to anyone looking for a high-quality website that will help grow their business.",
     link: "/value-lock-vip",
   },
 ];
+
+const CarouselItem = (item: Item) => (
+  <Section bg="light">
+    <div className={Classes.content}>
+      <div className={Classes.imageWrapper}>
+        <div className={Classes.imageContainer}>
+          <Image
+            src={item.image}
+            alt={item.imageAlt}
+            width={300}
+            height={300}
+          />
+        </div>
+      </div>
+      <div className={Classes.textWrapper}>
+        <h2>{item.name}</h2>
+        <p>{item.description}</p>
+        <Link href={item.link}>View Case Study</Link>
+      </div>
+    </div>
+  </Section>
+);
 
 const Home = () => {
   return (
@@ -95,7 +130,7 @@ const Home = () => {
       <Section bg="light">
         <Carousel>
           {items.map((item) => (
-            <Item key={item.name} {...item} />
+            <CarouselItem key={item.name} {...item} />
           ))}
         </Carousel>
       </Section>
@@ -104,15 +139,15 @@ const Home = () => {
   );
 };
 
-function Item(item: Item) {
-  return (
-    <Section bg="light">
-      <h2>{item.name}</h2>
-      <p>{item.description}</p>
+// function Item(item: Item) {
+//   return (
+//     <Section bg="light">
+//       <h2>{item.name}</h2>
+//       <p>{item.description}</p>
 
-      <Link href={item.link}>View Case Study</Link>
-    </Section>
-  );
-}
+//       <Link href={item.link}>View Case Study</Link>
+//     </Section>
+//   );
+// }
 
 export default Home;

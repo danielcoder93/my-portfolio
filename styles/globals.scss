@@ -41,6 +41,12 @@ h3 {
   font-size: 1rem;
   padding-bottom: .8rem;
 }
+h4 {
+  font-family: "Poppins";
+  font-weight: 300;
+  font-size: 1rem;
+  padding-bottom: .8rem;
+}
 
 #root {
   height: 100%;
@@ -54,4 +60,17 @@ a {
 
 a:hover {
   color: $primary;
+}
+p1 {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: $Poppins;
+  color: $dark-color;
+  background-color: $bg;
+}
+p {
+  font-family: "Poppins";
+  font-weight: 300;
+  font-size: 1rem;
+  padding-bottom: .8rem;
 }

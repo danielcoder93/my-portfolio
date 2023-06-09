@@ -58,7 +58,7 @@ function Value() {
       }}
       leftresults={{
         title: "Results",
-        body: `The website we created has effectively conveyed VLS's professional and trustworthy image to potential clients. The user-friendly interface has resulted in increased engagement, with users spending more time on the website. Additionally, VLS's SEO efforts have resulted in increased visibility, leading to more conversions and revenue.`,
+        body: `Through an expertly designed website with strong SEO practices, we achieved an impressive sales growth of 177.977%. Our user-friendly interface, seamless functionality across devices, and optimized content attracted a larger audience and drove increased organic traffic. By converting visitors into satisfied customers, our website played a vital role in positioning us as a market leader in our industry.`,
       }}
       WhiteBox={WhiteBoxw}
       conclusion={{

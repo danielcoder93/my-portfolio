@@ -3,14 +3,14 @@ import styles from "../styles/Footer.module.scss";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Link from "next/link";
-import black from "../public/black.png";
+import black from "../public/createdrevlogo.png";
 import Image from "next/image";
 const Footer = () => {
   return (
     <footer>
       <div className={styles.footerRow}>
       <div className={styles.logo}>
-            <Image src={black} alt="LOGO" width="75" height="75" />
+            <Image src={black} alt="LOGO" width="100" height="100" />
           </div>
       <div className={styles.contactContainer}>
       <p>Contact us <br/>

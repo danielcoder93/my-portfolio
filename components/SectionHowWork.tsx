@@ -4,7 +4,7 @@ import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import classes from "../styles/SectionHowWork.module.scss";
 import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import * as React from "react";
 
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
@@ -56,7 +56,7 @@ const ControlledAccordions = () => {
           </Typography>
         </MuiAccordionSummary>
         <AccordionDetails className={classes.accordionDetails}>
-          <Typography>
+          <Typography variant="h6">
             Each business/s needs are different, so due to variations in scope,
             pricing from one web design to the next can be quite different. Our
             typical end-to-end website redesign costs $10,000-$100,000.
@@ -79,7 +79,7 @@ const ControlledAccordions = () => {
           </Typography>
         </MuiAccordionSummary>
         <AccordionDetails className={classes.accordionDetails}>
-          <Typography>
+          <Typography variant="h6">
             Similar to questions regarding website cost, the timeline will vary
             greatly based on the scope of your web design project. Typically,
             our end-to-end build projects take 2-4 months to complete.
@@ -102,7 +102,7 @@ const ControlledAccordions = () => {
           </Typography>
         </MuiAccordionSummary>
         <AccordionDetails className={classes.accordionDetails}>
-          <Typography>
+          <Typography variant="h6">
             We have an even balance of start-ups, small businesses, non-profits,
             and enterprise clients across a multitude of industries. To get a
             better sense of our wide range of web design projects, check out our
@@ -127,7 +127,7 @@ const ControlledAccordions = () => {
           </Typography>
         </MuiAccordionSummary>
         <AccordionDetails className={classes.accordionDetails}>
-          <Typography>
+          <Typography variant="h6">
             At Created Revolution, we pride ourselves on being different from
             any other web agency. We are results-driven, meaning that our focus
             is on helping our clients achieve their specific business goals

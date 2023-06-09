@@ -1,5 +1,5 @@
 import React, { useEffect, useState, FC } from "react";
-import black from "../public/black.png";
+import black from "../public/createdrevlogo.png";
 import Image from "next/image";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
@@ -61,7 +61,7 @@ const Header = () => {
       <div className={classes.header__content}>
         <Link href="/" className={classes.header__content__logo}>
           <div>
-            <Image src={black} alt="" width="50" height="50" />
+            <Image src={black} alt="" width="100" height="100" />
           </div>
         </Link>
 
