@@ -27,18 +27,27 @@ const Hero = () => {
           alignItems="center"
           color="#fff"
           paddingX={6}
-          
         >
-          <Typography variant="h3" component="h1" className={classes.title} paddingBottom={7}>
-          Transforming ideas into digital solutions
+          <Typography
+            variant="h3"
+            component="h1"
+            className={classes.title}
+            paddingBottom={7}
+          >
+            Transforming ideas into digital solutions
           </Typography>
 
-          <h3 style={{ textAlign: "center" }} >
+          <h3 style={{ textAlign: "center" }}>
             Manage your business with an easy-to-use website that converts
             visitors to customers/clients
           </h3>
           <div>
-            <Button size="large" variant="contained" className={classes.button}>
+            <Button
+              href="/allprojects"
+              size="large"
+              variant="contained"
+              className={classes.button}
+            >
               VIEW OUR WORK
             </Button>
           </div>
