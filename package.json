@@ -3,15 +3,18 @@
   "version": "1.0.0",
   "private": true,
   "description": "Created Revolution — websites and local growth systems for HVAC, plumbing, and roofing contractors.",
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint .",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "next": "15.5.22",
+    "next": "16.2.12",
     "nodemailer": "^9.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -22,8 +25,8 @@
     "@types/nodemailer": "^8.0.1",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
-    "eslint": "8.57.1",
-    "eslint-config-next": "15.5.22",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.2.12",
     "typescript": "5.9.3"
   },
   "overrides": {

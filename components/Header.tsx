@@ -1,15 +1,12 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "../styles/Header.module.scss";
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
-
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [router.asPath]);
+  const [menuState, setMenuState] = useState({ path: router.asPath, open: false });
+  const menuOpen = menuState.path === router.asPath && menuState.open;
 
   return (
     <header className={styles.header}>
@@ -30,7 +27,12 @@ const Header = () => {
           aria-expanded={menuOpen}
           aria-controls="primary-navigation"
           aria-label={menuOpen ? "Close navigation" : "Open navigation"}
-          onClick={() => setMenuOpen((open) => !open)}
+          onClick={() =>
+            setMenuState((current) => ({
+              path: router.asPath,
+              open: current.path === router.asPath ? !current.open : true,
+            }))
+          }
         >
           <span />
           <span />
