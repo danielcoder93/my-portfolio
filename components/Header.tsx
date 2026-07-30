@@ -1,115 +1,57 @@
-import React, { useEffect, useState, FC } from "react";
-import black from "../public/createdrevlogo.png";
-import Image from "next/image";
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
-import clsx from "clsx";
-import classes from "../styles/Header.module.scss";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import styles from "../styles/Header.module.scss";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [width, setWidth] = useState(0);
-  const [isSticky, setSticky] = useState(false);
-
-  const setIsSticky = () => {
-    const scrollTop = window.scrollY;
-    scrollTop > 0 ? setSticky(true) : setSticky(false);
-  };
+  const router = useRouter();
 
   useEffect(() => {
-    setWidth(window.innerWidth);
-  }, []);
-  useEffect(() => {
-    window.addEventListener("scroll", setIsSticky);
-    return () => {
-      window.removeEventListener("scroll", setIsSticky);
-    };
-  });
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    if (width > 768) {
-      setMenuOpen(true);
-    }
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const menuToggleHandler = () => {
     setMenuOpen(false);
-  };
-
-  let navStyle = "";
-  if (width < 768 && menuOpen) {
-    navStyle = classes.isMenuOpen;
-  }
-  if (width < 768 && !menuOpen) {
-    navStyle = classes.isMenuNotOpen;
-  }
+  }, [router.asPath]);
 
   return (
-    <header
-      className={clsx(
-        classes.header,
-        isSticky ? classes.sticky : classes.notSticky
-      )}
-    >
-      <div className={classes.header__content}>
-        <Link href="/" className={classes.header__content__logo}>
-          <div>
-            <Image src={black} alt="" width="100" height="100" />
-          </div>
+    <header className={styles.header}>
+      <div className={`site-container ${styles.inner}`}>
+        <Link href="/" className={styles.brand} aria-label="Created Revolution home">
+          <span className={styles.brandMark} aria-hidden="true">
+            CR
+          </span>
+          <span className={styles.brandText}>
+            Created
+            <strong>Revolution</strong>
+          </span>
         </Link>
 
-        <NavComponent
-          menuToggleHandler={menuToggleHandler}
-          extraClasses={navStyle}
-        />
-        <div className={classes.header__content__toggle}>
-          {!menuOpen ? (
-            <MenuIcon onClick={() => setMenuOpen(true)} />
-          ) : (
-            <CloseIcon onClick={() => setMenuOpen(false)} />
-          )}
-        </div>
+        <button
+          type="button"
+          className={styles.menuButton}
+          aria-expanded={menuOpen}
+          aria-controls="primary-navigation"
+          aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        <nav
+          id="primary-navigation"
+          className={`${styles.nav} ${menuOpen ? styles.navOpen : ""}`}
+          aria-label="Primary navigation"
+        >
+          <Link href="/services">Services</Link>
+          <Link href="/industries">Industries</Link>
+          <Link href="/our-work">Our Work</Link>
+          <Link href="/about">About</Link>
+          <Link href="/free-website-review" className={styles.navCta}>
+            Free Website Review
+          </Link>
+        </nav>
       </div>
     </header>
-  );
-};
-
-const NavComponent: FC<{
-  menuToggleHandler: () => void;
-  extraClasses?: string;
-}> = ({ menuToggleHandler, extraClasses }) => {
-  return (
-    <nav
-      className={clsx(
-        classes.header__content__nav,
-        extraClasses && extraClasses
-      )}
-    >
-      <ul className={classes.header}>
-        <li>
-          <Link href="/allprojects" onClick={menuToggleHandler}>
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link href="/aboutus" onClick={menuToggleHandler}>
-            About us
-          </Link>
-        </li>
-        <li>
-          <Link href="/contact-us" onClick={menuToggleHandler}>
-            Contact us
-          </Link>
-        </li>
-      </ul>
-    </nav>
   );
 };
 

@@ -1,27 +1,57 @@
-import { Box, Button, Typography } from "@mui/material";
-import styles from "../styles/Footer.module.scss";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import Link from "next/link";
-import black from "../public/createdrevlogo.png";
-import Image from "next/image";
+import styles from "../styles/Footer.module.scss";
+
 const Footer = () => {
   return (
-    <footer>
-      <div className={styles.footerRow}>
-      <div className={styles.logo}>
-            <Image src={black} alt="LOGO" width="100" height="100" />
-          </div>
-      <div className={styles.contactContainer}>
-      <p>Contact us <br/>
-       Dan@createdrevolution.com</p>
-        
+    <footer className={styles.footer}>
+      <div className={`site-container ${styles.grid}`}>
+        <div className={styles.brandColumn}>
+          <Link href="/" className={styles.brand}>
+            <span aria-hidden="true">CR</span>
+            <strong>Created Revolution</strong>
+          </Link>
+          <p>
+            Websites and local growth systems built for HVAC, plumbing, and
+            roofing companies.
+          </p>
+          <a href="mailto:dan@createdrevolution.com">
+            dan@createdrevolution.com
+          </a>
+        </div>
+
+        <div>
+          <h2>Explore</h2>
+          <nav className={styles.links} aria-label="Footer navigation">
+            <Link href="/services">Services</Link>
+            <Link href="/industries">Industries</Link>
+            <Link href="/our-work">Our Work</Link>
+            <Link href="/about">About</Link>
+          </nav>
+        </div>
+
+        <div>
+          <h2>Ready for a clearer plan?</h2>
+          <p>
+            Get a practical review of the leaks in your website and local
+            search presence.
+          </p>
+          <Link href="/free-website-review" className="button button-light">
+            Request a Free Review
+          </Link>
+        </div>
       </div>
-      <div className={styles.contactContainer}>
-      <p>Created Revolution <br/> New York, NY </p>
-      </div>
+
+      <div className={`site-container ${styles.bottom}`}>
+        <p>
+          © {new Date().getFullYear()} Created Revolution. All rights reserved.
+        </p>
+        <div>
+          <span>Florida-based · Serving contractors nationwide</span>
+          <Link href="/privacy">Privacy Policy</Link>
+        </div>
       </div>
     </footer>
   );
 };
+
 export default Footer;

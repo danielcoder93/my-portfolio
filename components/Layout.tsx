@@ -1,14 +1,15 @@
-import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import classes from "../styles/Layout.module.scss";
 import { ReactNode, FC } from "react";
+import Footer from "./Footer";
+import Header from "./Header";
 
 const Layout: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <>
+      <a className="skip-link" href="#main-content">
+        Skip to content
+      </a>
       <Header />
-      <div className={classes.container}>{children}</div>
+      <main id="main-content">{children}</main>
       <Footer />
     </>
   );
