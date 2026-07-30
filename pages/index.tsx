@@ -38,8 +38,7 @@ const Home = () => {
             </div>
             <div className={styles.microProof}>
               <span aria-hidden="true" />
-              Founder-led · Built around calls and booked work—not vanity
-              metrics
+              Founder-led · Clear scope · Practical contractor-focused work
             </div>
           </div>
 
@@ -68,21 +67,21 @@ const Home = () => {
               <div className={styles.pipelineStep}>
                 <span>03</span>
                 <div>
-                  <strong>Lead tracking and recovery</strong>
-                  <small>Know what rang and what booked</small>
+                  <strong>Lead tracking and contact setup</strong>
+                  <small>See where inquiries come from</small>
                 </div>
-                <span>Booked jobs</span>
+                <span>Lead source</span>
               </div>
             </div>
             <div className={styles.pipelineFooter}>
               <p>
-                North-star metric
-                <strong>Qualified calls</strong>
+                Primary action
+                <strong>Calls and estimates</strong>
               </p>
               <span aria-hidden="true">→</span>
               <p>
-                Business outcome
-                <strong>More booked work</strong>
+                Useful insight
+                <strong>Clearer lead sources</strong>
               </p>
             </div>
           </div>
@@ -141,11 +140,10 @@ const Home = () => {
         <div className="site-container">
           <div className="section-heading">
             <span className="eyebrow">The Created Revolution system</span>
-            <h2>Four parts. One job-winning machine.</h2>
+            <h2>Four practical parts built around the same priorities.</h2>
             <p>
-              Each piece is useful on its own. The real advantage comes when
-              your website, local visibility, lead handling, and reporting are
-              designed to support the same outcome.
+              Each piece can stand alone. Together, they give your website,
+              local visibility, and basic tracking a clear structure.
             </p>
           </div>
           <div className={styles.systemGrid}>
@@ -176,11 +174,11 @@ const Home = () => {
               </p>
             </article>
             <article className={styles.systemCard}>
-              <span>04 / Recover</span>
-              <h3>Tracking and lead follow-up</h3>
+              <span>04 / Track</span>
+              <h3>Tracking and contact setup</h3>
               <p>
-                Connect forms, calls, analytics, Search Console, and your lead
-                process so good opportunities do not disappear after the click.
+                Connect forms, analytics, Search Console, and existing tools so
+                you can see how people contact the business.
               </p>
             </article>
           </div>
@@ -191,12 +189,12 @@ const Home = () => {
         <div className="site-container">
           <div className={styles.offer}>
             <div className={styles.offerCopy}>
-              <span className="eyebrow">Flagship offer</span>
-              <h2>The HVAC Lead Recovery System</h2>
+              <span className="eyebrow">Example project focus</span>
+              <h2>HVAC Website and Local Visibility Foundation</h2>
               <p>
-                A practical foundation for HVAC companies that want more repair,
-                replacement, and maintenance-plan opportunities from the demand
-                already in their market.
+                A focused starting point for HVAC companies that need clearer
+                service pages, stronger local presentation, and basic inquiry
+                tracking.
               </p>
               <ul className={styles.offerList}>
                 <li>Conversion-focused core website</li>
@@ -208,13 +206,18 @@ const Home = () => {
               </ul>
             </div>
             <div className={styles.offerPrice}>
-              <p>Typical engagement</p>
-              <strong>$4k–$8k</strong>
-              <span>initial build and setup</span>
-              <strong>$750–$1.5k</strong>
-              <span>monthly growth support</span>
-              <Link href="/services" className="button button-secondary">
-                Explore What Is Included
+              <p>Built around your priorities</p>
+              <h3>Custom Project Scope</h3>
+              <div className={styles.offerPriceCopy}>
+                After reviewing your current website, services, and goals, we
+                provide a clear project plan and fixed proposal. Founding-client
+                pricing may be available for select contractor businesses.
+              </div>
+              <Link
+                href="/free-website-review"
+                className="button button-secondary"
+              >
+                Request a Free Website Review
               </Link>
             </div>
           </div>
@@ -285,16 +288,16 @@ const Home = () => {
               </p>
             </article>
             <article className={styles.processItem}>
-              <h3>Build the system</h3>
+              <h3>Build the essentials</h3>
               <p>
-                Create the pages, tracking, and local-search foundation around
-                those priorities.
+                Create the priority pages, tracking, and local-search setup.
               </p>
             </article>
             <article className={styles.processItem}>
               <h3>Improve what works</h3>
               <p>
-                Use real search and lead data to guide the next monthly action.
+                Use website, search, and inquiry data to decide what to update
+                next.
               </p>
             </article>
           </div>

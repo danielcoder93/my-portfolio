@@ -14,11 +14,14 @@ const Services = () => {
       <header className={styles.pageHero}>
         <div className="site-container">
           <span className="eyebrow">Services</span>
-          <h1>A complete local growth foundation—not a pile of deliverables.</h1>
+          <h1>
+            A Better Website, Stronger Local Visibility, and Clearer Lead
+            Tracking
+          </h1>
           <p>
-            Created Revolution connects the pieces that help a contractor get
-            found, earn trust, generate a call, and understand which marketing
-            activity is producing real opportunities.
+            Created Revolution helps HVAC, plumbing, and roofing companies
+            improve how they appear online, explain their services, and turn
+            more website visitors into calls and estimate requests.
           </p>
         </div>
       </header>
@@ -30,18 +33,16 @@ const Services = () => {
             <div>
               <h2>Conversion-focused contractor websites</h2>
               <p>
-                Fast, mobile-first websites structured around the questions and
-                decisions a local homeowner makes before calling. Every page has
-                a job: make your company easier to trust and easier to contact.
+                We build fast, mobile-friendly contractor websites that clearly
+                explain your services, establish trust, and make calling or
+                requesting an estimate the obvious next step.
               </p>
               <ul className={styles.bulletColumns}>
                 <li>Clear homepage positioning</li>
                 <li>Individual service pages</li>
-                <li>Service-area page framework</li>
-                <li>Emergency click-to-call paths</li>
+                <li>Service-area page structure</li>
+                <li>Mobile click-to-call buttons</li>
                 <li>Reviews, FAQs, and trust elements</li>
-                <li>Financing and maintenance-plan pages</li>
-                <li>Fast mobile performance</li>
                 <li>Accessible forms and navigation</li>
               </ul>
             </div>
@@ -52,41 +53,37 @@ const Services = () => {
             <div>
               <h2>Local SEO and Google Business Profile alignment</h2>
               <p>
-                Your profile and your website should tell Google and homeowners
-                the same clear story: what you do, where you do it, and why your
-                business is a credible local choice.
+                Your website and Google Business Profile should clearly
+                communicate what you do, where you work, and why local
+                homeowners should choose your company.
               </p>
               <ul className={styles.bulletColumns}>
-                <li>Primary and secondary category review</li>
-                <li>Services and service-area cleanup</li>
-                <li>Hours, links, photos, and business details</li>
+                <li>Category and service review</li>
+                <li>Service-area and business-detail cleanup</li>
+                <li>Website titles and local page structure</li>
                 <li>Review request and response workflow</li>
-                <li>On-page titles and local relevance</li>
-                <li>Internal linking and page hierarchy</li>
-                <li>Local business structured data</li>
-                <li>Search Console configuration</li>
+                <li>Internal linking</li>
+                <li>Search Console setup</li>
               </ul>
             </div>
           </article>
 
           <article className={styles.serviceBlock}>
-            <span>03 / RECOVER</span>
+            <span>03 / TRACK</span>
             <div>
-              <h2>Lead tracking and follow-up foundation</h2>
+              <h2>Lead tracking and contact setup</h2>
               <p>
-                A form submission or phone call is only valuable when someone
-                sees it, handles it, and can trace it back to a source. We set up
-                the basic visibility needed to stop guessing.
+                We help connect forms, phone calls, analytics, and your existing
+                customer-management tools so you can better understand where
+                inquiries are coming from.
               </p>
               <ul className={styles.bulletColumns}>
-                <li>GA4 and conversion-event setup</li>
+                <li>GA4 and basic conversion tracking</li>
                 <li>Google Search Console</li>
-                <li>Call-tracking plan and installation</li>
-                <li>Form routing and confirmation states</li>
-                <li>CRM handoff planning</li>
-                <li>Missed-call follow-up workflow</li>
-                <li>Source and campaign visibility</li>
-                <li>Lead-quality review cadence</li>
+                <li>Contact-form routing</li>
+                <li>Confirmation and error messages</li>
+                <li>Call-tracking installation when appropriate</li>
+                <li>Existing CRM or booking-system integration</li>
               </ul>
             </div>
           </article>
@@ -94,59 +91,22 @@ const Services = () => {
           <article className={styles.serviceBlock}>
             <span>04 / IMPROVE</span>
             <div>
-              <h2>Ongoing contractor growth support</h2>
+              <h2>Ongoing website and local visibility support</h2>
               <p>
-                Monthly work should respond to real evidence. Support can
-                include page improvements, new service or city content, profile
-                updates, technical fixes, review workflows, and clear reporting.
+                Ongoing support can include website updates, new service or
+                location pages, Google Business Profile maintenance, technical
+                fixes, and simple reporting.
               </p>
               <ul className={styles.bulletColumns}>
-                <li>Priority-page improvements</li>
-                <li>New service and city pages</li>
-                <li>Google profile upkeep</li>
-                <li>Technical SEO monitoring</li>
-                <li>Review and photo cadence</li>
-                <li>Monthly call and form review</li>
-                <li>Simple reporting tied to leads</li>
-                <li>Quarterly priority reset</li>
+                <li>Website content updates</li>
+                <li>New service and location pages</li>
+                <li>Google Business Profile upkeep</li>
+                <li>Technical website monitoring</li>
+                <li>Review and photo workflow support</li>
+                <li>Simple monthly reporting</li>
               </ul>
             </div>
           </article>
-        </div>
-      </section>
-
-      <section className="section section-dark">
-        <div className="site-container">
-          <div className="section-heading">
-            <span className="eyebrow">Engagement options</span>
-            <h2>Start with the bottleneck, then build the full system.</h2>
-          </div>
-          <div className={styles.cardGrid}>
-            <article className={styles.card}>
-              <span className={styles.cardNumber}>01</span>
-              <h3>Website foundation</h3>
-              <p>
-                For contractors whose current site is slow, generic, difficult
-                to update, or unclear about why a homeowner should call.
-              </p>
-            </article>
-            <article className={styles.card}>
-              <span className={styles.cardNumber}>02</span>
-              <h3>Local visibility foundation</h3>
-              <p>
-                For companies with a solid operation but weak service-page
-                coverage, inconsistent profile details, or unclear local focus.
-              </p>
-            </article>
-            <article className={styles.card}>
-              <span className={styles.cardNumber}>03</span>
-              <h3>Full growth system</h3>
-              <p>
-                Website, priority service pages, Google alignment, tracking, and
-                monthly improvement managed around qualified calls.
-              </p>
-            </article>
-          </div>
         </div>
       </section>
 
@@ -154,25 +114,27 @@ const Services = () => {
         <div className="site-container">
           <div className="section-heading">
             <span className="eyebrow">Fit and expectations</span>
-            <h2>Built for serious local operators.</h2>
+            <h2>A strong fit for growing local contractors.</h2>
           </div>
           <div className={styles.fitGrid}>
             <div className={styles.fitCard}>
               <h3>This is a strong fit when you…</h3>
               <ul>
-                <li>Answer the phone and care about lead quality</li>
-                <li>Know which jobs are most valuable to the business</li>
-                <li>Can deliver a good customer experience after the lead</li>
-                <li>Want a focused partner, not another dashboard</li>
+                <li>Want a more professional contractor website</li>
+                <li>Care about calls and estimate requests</li>
+                <li>Know which services are most valuable</li>
+                <li>Can provide real reviews, photos, and business information</li>
+                <li>Want clear communication and a defined project scope</li>
               </ul>
             </div>
             <div className={styles.fitCard}>
-              <h3>This is not the right fit when you…</h3>
+              <h3>This may not be the right fit when you…</h3>
               <ul>
-                <li>Want guaranteed rankings or instant lead volume</li>
-                <li>Are unwilling to collect real reviews and project photos</li>
-                <li>Cannot respond to calls or estimate requests promptly</li>
-                <li>Only want the cheapest possible brochure website</li>
+                <li>Need guaranteed Google rankings</li>
+                <li>Expect instant lead volume</li>
+                <li>Cannot respond to customer inquiries</li>
+                <li>Only need a temporary one-page website</li>
+                <li>Are unwilling to provide accurate business information</li>
               </ul>
             </div>
           </div>
@@ -192,18 +154,17 @@ const Services = () => {
             <details>
               <summary>How much does a typical engagement cost?</summary>
               <p>
-                A focused initial build usually falls between $4,000 and $8,000.
-                Ongoing growth support typically ranges from $750 to $1,500 per
-                month, depending on the market, number of locations, and pace of
-                work.
+                Every project is different. After reviewing your current
+                website, services, service areas, and goals, we provide a clear
+                project scope and fixed proposal. Founding-client pricing may
+                be available for select contractor businesses.
               </p>
             </details>
             <details>
               <summary>How long does a website build take?</summary>
               <p>
-                A focused contractor website can typically move from strategy
-                to launch in four to eight weeks when content, approvals, and
-                access are supplied on schedule.
+                A focused contractor website typically takes four to eight
+                weeks when content, approvals, and access arrive on schedule.
               </p>
             </details>
             <details>
@@ -232,8 +193,8 @@ const Services = () => {
             <span className="eyebrow">Not sure where to start?</span>
             <h2>Start with the free website review.</h2>
             <p>
-              Get a practical look at your current website, local presence, and
-              lead path before deciding what to build.
+              Get a practical review of your website, local presence, and
+              contact path.
             </p>
           </div>
           <Link

@@ -426,17 +426,18 @@
   text-transform: uppercase;
 }
 
-.offerPrice strong {
-  margin-bottom: 6px;
+.offerPrice h3 {
+  margin-bottom: 18px;
   font-size: clamp(2rem, 4vw, 3.2rem);
-  line-height: 1;
+  line-height: 1.05;
   letter-spacing: -0.06em;
 }
 
-.offerPrice span {
+.offerPriceCopy {
+  max-width: 420px;
   margin-bottom: 26px;
   color: #5a4610;
-  font-size: 0.86rem;
+  font-size: 0.95rem;
 }
 
 .industryGrid {
