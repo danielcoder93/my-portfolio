@@ -86,19 +86,25 @@ const OurWork = () => {
         <div className="site-container">
           <div className={styles.foundingOffer}>
             <div>
-              <span className="eyebrow">Founding partner project</span>
-              <h2>One Sarasota-area plumbing build.</h2>
+              <span className="eyebrow">Founding Partner Project</span>
+              <h2>
+                One complimentary website build for a Sarasota-area HVAC,
+                plumbing, or roofing company.
+              </h2>
               <p>
-                Created Revolution is selecting one qualified plumbing company
-                for a complimentary founding website project. No company is
-                presented as a client until both sides agree to work together.
+                Created Revolution is selecting one qualified HVAC, plumbing,
+                or roofing company for a modern, conversion-focused website at
+                no design or development cost. In return, we ask for timely
+                feedback, accurate business information, and permission to
+                document the project. Any testimonial or performance results
+                will only be shared with the company’s approval.
               </p>
             </div>
             <div>
               <h3>What the selected company receives</h3>
               <ul>
                 <li>Strategy and conversion-focused website build</li>
-                <li>Core plumbing service-page structure</li>
+                <li>Core service-page structure</li>
                 <li>Local search and Google profile review</li>
                 <li>Basic calls-and-forms measurement setup</li>
               </ul>
