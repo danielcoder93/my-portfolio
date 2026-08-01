@@ -51,29 +51,32 @@ const OurWork = () => {
           </div>
           <div className={styles.workGrid}>
             <article className={styles.workCard}>
-              <span>Shopify · Node.js</span>
+              <span>Archived prior project · Shopify · Node.js</span>
               <h3>Value Lock Sports</h3>
               <p>
-                Shopify theme migration, custom storefront features, scheduled
-                membership-status automation, and newsletter functionality.
+                Prior Shopify theme migration with custom storefront features,
+                scheduled membership-status automation, and newsletter
+                functionality. This project is archived and is not presented
+                as a currently active website.
               </p>
             </article>
             <article className={styles.workCard}>
-              <span>React · WordPress</span>
+              <span>Verified live project · React · WordPress</span>
               <h3>Dusk RE</h3>
               <p>
                 Responsive real-estate website using a React-based front end and
                 WordPress content management, deployed across Vercel and
                 SiteGround.
               </p>
-            </article>
-            <article className={styles.workCard}>
-              <span>WordPress · Booking</span>
-              <h3>Adirondacks Preserve</h3>
-              <p>
-                Vacation-rental web experience with property content and a
-                booking workflow designed around an external lodging platform.
-              </p>
+              <a
+                href="https://www.duskre.com/"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.workLink}
+              >
+                Visit Dusk RE
+                <span aria-hidden="true">↗</span>
+              </a>
             </article>
           </div>
         </div>
