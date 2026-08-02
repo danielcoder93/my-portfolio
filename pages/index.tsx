@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       <SiteHead
-        description="Created Revolution builds conversion-focused websites and local growth systems for HVAC, plumbing, and roofing companies."
+        description="Created Revolution provides contractor website design, local SEO, Local Services Ads, social media, and Facebook Ads for HVAC, plumbing, and roofing companies."
         path="/"
       />
 
@@ -21,9 +21,9 @@ const Home = () => {
               <em>win more jobs.</em>
             </h1>
             <p>
-              Created Revolution turns your website, Google presence, and lead
-              follow-up into one focused system—so more local homeowners call,
-              book, and choose your company.
+              Created Revolution brings your website, local visibility, and
+              focused campaigns into one clear plan—so homeowners can find,
+              trust, and contact your company.
             </p>
             <div className={styles.buttonRow}>
               <Link
@@ -140,47 +140,58 @@ const Home = () => {
         <div className="site-container">
           <div className="section-heading">
             <span className="eyebrow">The Created Revolution system</span>
-            <h2>Four practical parts built around the same priorities.</h2>
+            <h2>Five focused services built around the same customer journey.</h2>
             <p>
-              Each piece can stand alone. Together, they give your website,
-              local visibility, and basic tracking a clear structure.
+              Start with the website and local-search foundation. Add paid or
+              social campaigns when they match your market and goals.
             </p>
           </div>
           <div className={styles.systemGrid}>
             <article className={styles.systemCard}>
-              <span>01 / Position</span>
-              <h3>Offer and market strategy</h3>
+              <span>01 / Build</span>
+              <h3>Website design and development</h3>
               <p>
-                Clarify the most valuable jobs, strongest service areas, and
-                reasons homeowners should call you instead of the next listing.
+                Create fast, professional service pages that explain the work,
+                establish trust, and make contacting you easy.
               </p>
             </article>
             <article className={styles.systemCard}>
-              <span>02 / Convert</span>
-              <h3>Website and service pages</h3>
+              <span>02 / Get found</span>
+              <h3>SEO for contractors</h3>
               <p>
-                Build fast, focused pages around emergency calls, replacements,
-                financing, maintenance plans, and the services that drive
-                revenue.
+                Improve site structure, local relevance, Google Business
+                Profile alignment, and search measurement.
               </p>
             </article>
             <article className={styles.systemCard}>
-              <span>03 / Get found</span>
-              <h3>Local search foundation</h3>
+              <span>03 / Reach searchers</span>
+              <h3>Google Local Services Ads</h3>
               <p>
-                Align Google Business Profile details, on-page SEO, service
-                areas, reviews, and local signals around how people actually
-                search.
+                Set up and support eligible accounts around the right services,
+                service areas, schedule, budget, and inquiry path.
               </p>
             </article>
             <article className={styles.systemCard}>
-              <span>04 / Track</span>
-              <h3>Tracking and contact setup</h3>
+              <span>04 / Stay recognizable</span>
+              <h3>Social media content</h3>
               <p>
-                Connect forms, analytics, Search Console, and existing tools so
-                you can see how people contact the business.
+                Turn real projects, reviews, team updates, and helpful advice
+                into a more consistent local presence.
               </p>
             </article>
+            <article className={styles.systemCard}>
+              <span>05 / Promote</span>
+              <h3>Facebook and Instagram ads</h3>
+              <p>
+                Build focused local campaigns with a defined offer, response
+                path, tracking setup, and practical reporting.
+              </p>
+            </article>
+          </div>
+          <div className={styles.buttonRow} style={{ marginTop: "34px" }}>
+            <Link href="/services" className="button button-light">
+              Explore Every Service
+            </Link>
           </div>
         </div>
       </section>
