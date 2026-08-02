@@ -160,9 +160,11 @@ const Services = () => {
             </p>
           </div>
 
-          <div className={styles.servicesBoard} aria-label="Contractor marketing service stack">
+          <div
+            className={styles.servicesBoard}
+            aria-label="Contractor marketing service stack"
+          >
             <div className={styles.servicesBoardHeader}>
-              <p>Your contractor marketing foundation</p>
               <span>Five focused services</span>
             </div>
             <div className={styles.servicesBoardRows}>

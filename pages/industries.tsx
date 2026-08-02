@@ -93,7 +93,9 @@ const Industries = () => {
               </ul>
               <ul className={styles.checkList}>
                 <li>Problem-first navigation for homeowners under pressure</li>
-                <li>Visible licensing, review, guarantee, and response details</li>
+                <li>
+                  Visible licensing, reviews, warranties, and response details
+                </li>
                 <li>Service-area coverage without thin, duplicated city pages</li>
               </ul>
             </div>
@@ -162,8 +164,8 @@ const Industries = () => {
               <span className={styles.cardIcon}>03</span>
               <h3>Useful measurement</h3>
               <p>
-                Track qualified calls and forms by page and source so priorities
-                come from evidence.
+                Track calls and forms by page and source so priorities come from
+                evidence.
               </p>
             </article>
           </div>

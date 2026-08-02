@@ -7,7 +7,7 @@ const About = () => {
     <>
       <SiteHead
         title="About"
-        description="Created Revolution is a founder-led web and local growth agency for HVAC, plumbing, and roofing contractors."
+        description="Created Revolution is a founder-led website and marketing agency for HVAC, plumbing, and roofing contractors."
         path="/about"
       />
 
@@ -17,8 +17,8 @@ const About = () => {
           <h1>Built for operators who care about the work after the click.</h1>
           <p>
             Created Revolution is a founder-led agency focused on helping
-            home-service companies turn a stronger digital foundation into more
-            qualified calls and better visibility.
+            home-service companies build a stronger website, improve local
+            visibility, and run focused campaigns with clear expectations.
           </p>
         </div>
       </header>

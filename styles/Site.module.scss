@@ -1,3 +1,9 @@
+// Keep a harmless first rule ahead of the homepage hero. The production CSS
+// bundle may attach its encoding marker to the first selector.
+.hero::after {
+  content: none;
+}
+
 .hero {
   position: relative;
   overflow: hidden;
@@ -649,28 +655,20 @@
 .servicesBoardHeader {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 20px 22px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  gap: 20px;
-}
-
-.servicesBoardHeader p {
-  color: var(--white);
-  font-size: 0.76rem;
-  font-weight: 900;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
 }
 
 .servicesBoardHeader span {
-  padding: 6px 9px;
+  padding: 7px 14px;
   border-radius: 999px;
   color: #ffdca0;
   background: rgba(247, 201, 72, 0.1);
   font-size: 0.65rem;
   font-weight: 900;
   letter-spacing: 0.08em;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -1438,9 +1436,8 @@
   }
 
   .servicesBoardHeader {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    flex-direction: row;
   }
 
   .servicesBoardRow {

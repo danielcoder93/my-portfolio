@@ -9,6 +9,7 @@ const NotFound = () => {
         title="Page Not Found"
         description="The requested Created Revolution page could not be found."
         path="/404"
+        noIndex
       />
       <section className="section">
         <div className="narrow-container">
