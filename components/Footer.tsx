@@ -11,8 +11,8 @@ const Footer = () => {
             <strong>Created Revolution</strong>
           </Link>
           <p>
-            Websites and local growth systems built for HVAC, plumbing, and
-            roofing companies.
+            Websites, local visibility, and focused campaigns for HVAC,
+            plumbing, and roofing companies.
           </p>
           <a href="mailto:dan@createdrevolution.com">
             dan@createdrevolution.com
@@ -32,8 +32,8 @@ const Footer = () => {
         <div>
           <h2>Ready for a clearer plan?</h2>
           <p>
-            Get a practical review of the leaks in your website and local
-            search presence.
+            Get a practical review of your website, local visibility, and
+            strongest next opportunity.
           </p>
           <Link href="/free-website-review" className="button button-light">
             Request a Free Review
