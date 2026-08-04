@@ -47,30 +47,26 @@ const About = () => {
             <span className="eyebrow">The people behind the work</span>
             <h2>Real people, practical work, and direct communication.</h2>
             <p>
-              Daniel and Camila Coder are the family behind Created Revolution.
-              Daniel leads each client engagement, including website strategy,
-              development, and technical execution.
-              Camila&apos;s professional background includes employment with
-              Walmart and, currently, Memorial Sloan Kettering Cancer Center.
-              She brings that experience to clear communication, careful
-              coordination, and customer experience.
+              Created Revolution is a family-run agency built by Daniel and
+              Camila Coder. Daniel handles website strategy, design,
+              development, and technical implementation. Camila helps guide
+              client communication, project organization, and the overall
+              customer experience, drawing on her professional background at
+              Walmart and her current work at Memorial Sloan Kettering Cancer
+              Center.
             </p>
             <p>
-              Before web development, Daniel spent years working as a stationary
-              engineer. That operator background shaped a direct view of
-              marketing: systems should be understandable, dependable, and
-              connected to a real outcome.
+              Before becoming a web developer, Daniel spent years as a
+              stationary engineer. That experience taught him to solve problems
+              practically: understand what is not working, build something
+              dependable, and focus on results the business can see.
             </p>
             <p>
-              Created Revolution has built across custom React applications,
-              WordPress, Shopify, payments, membership workflows, booking
-              experiences, and integrations. The next chapter focuses that
-              experience on HVAC, plumbing, and roofing companies.
-            </p>
-            <p>
-              Together, they keep projects personal and accountable. Clients
-              know who they are working with, what is being built, and why each
-              priority matters.
+              Today, Created Revolution focuses on HVAC, plumbing, and roofing
+              companies. The goal is simple: build a professional website,
+              improve local visibility, and make it easier for homeowners to
+              call or request an estimate—with direct access to the people
+              doing the work.
             </p>
 
             <div className={styles.principles}>
