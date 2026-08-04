@@ -1197,54 +1197,38 @@
   gap: clamp(52px, 9vw, 120px);
 }
 
-.portrait {
+.familyPortrait {
   position: sticky;
   top: 120px;
-  display: grid;
   overflow: hidden;
-  min-height: 500px;
-  place-items: end start;
-  padding: 32px;
+  margin: 0;
   border-radius: var(--radius-lg);
-  color: var(--white);
-  background: linear-gradient(155deg, #193b5c, var(--navy));
+  background: var(--navy);
+  box-shadow: var(--shadow-md);
 }
 
-.portrait::before,
-.portrait::after {
-  position: absolute;
-  border-radius: 50%;
-  content: "";
-}
-
-.portrait::before {
-  top: 50px;
-  right: -70px;
-  width: 250px;
-  height: 250px;
-  border: 34px solid rgba(255, 255, 255, 0.07);
-}
-
-.portrait::after {
-  bottom: 120px;
-  left: 45px;
-  width: 90px;
-  height: 90px;
-  background: var(--accent);
-}
-
-.portrait div {
-  position: relative;
-  z-index: 1;
-}
-
-.portrait strong {
+.familyPortraitImage {
   display: block;
-  font-size: 2rem;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.familyPortraitCaption {
+  display: grid;
+  gap: 5px;
+  padding: 24px 26px 26px;
+  color: var(--white);
+}
+
+.familyPortraitCaption strong {
+  display: block;
+  font-size: 1.5rem;
   letter-spacing: -0.04em;
 }
 
-.portrait span {
+.familyPortraitCaption span {
   color: #b9c6d7;
 }
 
@@ -1407,13 +1391,13 @@
     border-left: 0;
   }
 
-  .portrait,
+  .familyPortrait,
   .reviewAside {
     position: static;
   }
 
-  .portrait {
-    min-height: 400px;
+  .familyPortrait {
+    max-width: 620px;
   }
 }
 

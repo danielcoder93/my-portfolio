@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import SiteHead from "../components/SiteHead";
 import styles from "../styles/Site.module.scss";
@@ -7,33 +8,53 @@ const About = () => {
     <>
       <SiteHead
         title="About"
-        description="Created Revolution is a founder-led website and marketing agency for HVAC, plumbing, and roofing contractors."
+        description="Meet Daniel and Camila Coder, the family behind Created Revolution's website and marketing services for HVAC, plumbing, and roofing contractors."
         path="/about"
       />
 
       <header className={styles.pageHero}>
         <div className="site-container">
           <span className="eyebrow">About Created Revolution</span>
-          <h1>Built for operators who care about the work after the click.</h1>
+          <h1>
+            A family-led agency for contractors who care about what happens
+            after the click.
+          </h1>
           <p>
-            Created Revolution is a founder-led agency focused on helping
-            home-service companies build a stronger website, improve local
-            visibility, and run focused campaigns with clear expectations.
+            Created Revolution helps home-service companies build a stronger
+            website, improve local visibility, and run focused campaigns with
+            clear expectations and direct communication.
           </p>
         </div>
       </header>
 
       <section className="section">
         <div className={`site-container ${styles.aboutGrid}`}>
-          <aside className={styles.portrait} aria-label="Daniel Coder">
-            <div>
-              <strong>Daniel Coder</strong>
-              <span>Founder · Created Revolution</span>
-            </div>
-          </aside>
+          <figure className={styles.familyPortrait}>
+            <Image
+              src="/dancamila.png"
+              alt="Daniel and Camila Coder, the family behind Created Revolution"
+              width={1080}
+              height={1080}
+              sizes="(max-width: 980px) 100vw, 38vw"
+              className={styles.familyPortraitImage}
+            />
+            <figcaption className={styles.familyPortraitCaption}>
+              <strong>Daniel &amp; Camila Coder</strong>
+              <span>The family behind Created Revolution</span>
+            </figcaption>
+          </figure>
           <div className={styles.aboutCopy}>
-            <span className="eyebrow">Why this agency exists</span>
-            <h2>Technical ability is useful. Business focus is what makes it pay.</h2>
+            <span className="eyebrow">The people behind the work</span>
+            <h2>Real people, practical work, and direct communication.</h2>
+            <p>
+              Daniel and Camila Coder are the family behind Created Revolution.
+              Daniel leads each client engagement, including website strategy,
+              development, and technical execution.
+              Camila&apos;s professional background includes employment with
+              Walmart and, currently, Memorial Sloan Kettering Cancer Center.
+              She brings that experience to clear communication, careful
+              coordination, and customer experience.
+            </p>
             <p>
               Before web development, Daniel spent years working as a stationary
               engineer. That operator background shaped a direct view of
@@ -47,9 +68,9 @@ const About = () => {
               experience on HVAC, plumbing, and roofing companies.
             </p>
             <p>
-              The goal is not to sound like the biggest agency in the room. It
-              is to stay close to the work, communicate clearly, and build the
-              pages and measurement a local operator can actually use.
+              Together, they keep projects personal and accountable. Clients
+              know who they are working with, what is being built, and why each
+              priority matters.
             </p>
 
             <div className={styles.principles}>
@@ -93,11 +114,11 @@ const About = () => {
       <section className="section-compact">
         <div className={`site-container ${styles.finalCta}`}>
           <div>
-            <span className="eyebrow">Talk directly with the founder</span>
-            <h2>Start with a practical look at the current site.</h2>
+            <span className="eyebrow">Work with the people behind the agency</span>
+            <h2>Start with a practical look at your current site.</h2>
             <p>
-              Daniel reviews each request and identifies the clearest
-              conversion, page, and local-presence opportunities.
+              Every request stays close to the people doing the work, with
+              Daniel leading the website and technical review.
             </p>
           </div>
           <Link
