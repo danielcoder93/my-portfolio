@@ -1164,6 +1164,29 @@
   background: var(--signal);
 }
 
+.foundingOfferDetails {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.foundingOfferGroup {
+  width: 100%;
+}
+
+.foundingOfferGroup + .foundingOfferGroup {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(76, 59, 13, 0.2);
+}
+
+.foundingOfferGroup h3 {
+  margin-bottom: 17px;
+  color: var(--navy);
+  font-size: 1.12rem;
+  line-height: 1.3;
+}
+
 .foundingOffer h2 {
   margin-bottom: 20px;
   font-size: clamp(2rem, 4vw, 3.2rem);
@@ -1176,18 +1199,26 @@
 .foundingOffer ul {
   display: grid;
   gap: 13px;
-  margin-bottom: 26px;
+  margin: 0;
 }
 
 .foundingOffer li {
   display: flex;
+  align-items: flex-start;
   gap: 10px;
   color: #4c3b0d;
   font-weight: 700;
+  line-height: 1.45;
 }
 
 .foundingOffer li::before {
+  flex: 0 0 auto;
   content: "✓";
+}
+
+.foundingOfferDetails > a {
+  align-self: flex-start;
+  margin-top: 34px;
 }
 
 .aboutGrid {

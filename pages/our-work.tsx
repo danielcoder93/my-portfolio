@@ -100,20 +100,24 @@ const OurWork = () => {
                 will only be shared with the company’s approval.
               </p>
             </div>
-            <div>
-              <h3>What the selected company receives</h3>
-              <ul>
-                <li>Strategy and conversion-focused website build</li>
-                <li>Core service-page structure</li>
-                <li>Local search and Google profile review</li>
-                <li>Basic calls-and-forms measurement setup</li>
-              </ul>
-              <h3>What Created Revolution asks in return</h3>
-              <ul>
-                <li>Timely access, content, and direct feedback</li>
-                <li>Permission to document the real process</li>
-                <li>An honest testimonial only if the work earns one</li>
-              </ul>
+            <div className={styles.foundingOfferDetails}>
+              <div className={styles.foundingOfferGroup}>
+                <h3>What the selected company receives</h3>
+                <ul>
+                  <li>Strategy and conversion-focused website build</li>
+                  <li>Core service-page structure</li>
+                  <li>Local search and Google profile review</li>
+                  <li>Basic calls-and-forms measurement setup</li>
+                </ul>
+              </div>
+              <div className={styles.foundingOfferGroup}>
+                <h3>What Created Revolution asks in return</h3>
+                <ul>
+                  <li>Timely access, content, and direct feedback</li>
+                  <li>Permission to document the real process</li>
+                  <li>An honest testimonial only if the work earns one</li>
+                </ul>
+              </div>
               <Link
                 href="/free-website-review"
                 className="button button-secondary"
