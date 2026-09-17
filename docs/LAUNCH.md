@@ -37,12 +37,14 @@ credentials or configure Vercel environment variables.
   receives the request, then verify Reply targets the prospect.
 - Follow an outreach URL through internal pages, then submit. Confirm campaign labels,
   landing page, and selected offer in the same email.
-- Missing mail settings or provider failure shows an error, keeps typed details,
-  and provides a working direct email link. No success event should be logged.
+- Missing mail settings selects the explicit email-draft page. Provider failure
+  in the configured form shows an error, keeps typed details, and provides a
+  direct email link. Neither case logs a successful submission.
 - Check mobile menu, keyboard navigation, form labels, and narrow viewport overflow.
 - Lint, typecheck, focused tests, and production build pass on Node 22.
 - On production: check apex-to-www behavior, canonical URLs, robots, sitemap, and old-route redirects.
-- After merge, verify a real submission on the production domain before sending outreach.
+- After merge, verify the production email draft and actual inbox receipt before
+  sending outreach. If SMTP is configured, also verify a real form submission.
 
 ### Initial measurement and follow-up
 
@@ -71,7 +73,8 @@ checks as incomplete; do not mark them complete based on a build.
 
 ## Implementation validation — September 17, 2026
 
-- Local revision: primary commit `85e169a` plus the validation handoff commit.
+- Local revision includes the offer, portfolio, direct form, email-draft mode,
+  and validation documentation.
 - Lint, TypeScript checks, ten focused tests, and the production build passed.
 - Node 22.23.2 HTTP smoke checks: all seven core pages, sitemap, robots, and
   the Raisa screenshot returned 200; all four legacy routes redirected correctly.
@@ -83,8 +86,12 @@ checks as incomplete; do not mark them complete based on a build.
 - GitHub did not receive this revision: local Git lacked authentication, and the
   connected GitHub integration rejected blob creation with HTTP 403
   (Resource not accessible by integration). PR #17 and its preview are unchanged.
-- The connected Mac returned one initial shell check, then stopped responding
-  to the repository/account check and a connectivity ping. No Mac files changed.
+- The connected Mac subsequently became available. The revision was applied and
+  committed as `093803d` in `/Users/danielcoder/Desktop/pr17-launch-review`.
+  Existing uncommitted work in `my-portfolio-dan` was preserved. The HTTPS push
+  failed because the saved GitHub credential was invalid; the available SSH
+  identity was also rejected. A valid GitHub sign-in is the current publishing
+  blocker. This documentation records the state before a successful push.
 
 The handoff includes the patch for the exact PR head
 `56e96331bec1116af06babc2a8ca44b6f2c22e23`. Apply it on the existing PR branch
