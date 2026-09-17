@@ -2,10 +2,21 @@
 
 ## Current release gate
 
-The site can publish using its explicit email-draft contact mode while fresh SMTP
-configuration is pending. A visitor must send the draft from their email app; the
-site does not claim receipt or log a submission when a draft opens. Verify that
-Daniel’s public inbox receives mail before beginning an outreach campaign.
+The code is pushed to PR #17 and its Vercel preview and GitHub Actions checks pass.
+Production release is blocked by the custom domain and its contact address:
+`createdrevolution.com` returns NXDOMAIN, including its MX lookup. Vercel reports
+the domain is available to register, so the site must not advertise
+`dan@createdrevolution.com` as a working contact path yet.
+
+Restore/register the intended domain and configure an inbox, or obtain Daniel’s
+current public contact address and use the project’s active Vercel production
+domain temporarily. Match the canonical URL, sitemap, robots, and contact links
+to the chosen launch setup. Do not publish a private account email merely because
+it appears in hosting metadata.
+
+Once there is a working inbox, the site can publish using explicit email-draft
+contact mode while fresh SMTP configuration is pending. A visitor must send the
+draft from their email app; opening it never claims receipt or logs a submission.
 Credential rotation remains necessary even though this site no longer uses the
 old password. Code validation and Vercel READY do not prove inbox delivery.
 
@@ -80,22 +91,19 @@ checks as incomplete; do not mark them complete based on a build.
   the Raisa screenshot returned 200; all four legacy routes redirected correctly.
 - With SMTP configuration absent, a real HTTP submission returned 503 and a
   request reference instead of claiming success.
-- The original hosted preview and Raisa’s live site were inspected in the browser.
-  Browser access to the revised local site was blocked, so interactive mobile
-  and revised form UI checks remain pending.
-- GitHub did not receive this revision: local Git lacked authentication, and the
-  connected GitHub integration rejected blob creation with HTTP 403
-  (Resource not accessible by integration). PR #17 and its preview are unchanged.
-- The connected Mac subsequently became available. The revision was applied and
-  committed as `093803d` in `/Users/danielcoder/Desktop/pr17-launch-review`.
-  Existing uncommitted work in `my-portfolio-dan` was preserved. The HTTPS push
-  failed because the saved GitHub credential was invalid; the available SSH
-  identity was also rejected. A valid GitHub sign-in is the current publishing
-  blocker. This documentation records the state before a successful push.
-
-The handoff includes the patch for the exact PR head
-`56e96331bec1116af06babc2a8ca44b6f2c22e23`. Apply it on the existing PR branch
-and push through an authenticated Git client; do not force-push.
+- GitHub authentication was restored as `danielcoder93`, and the prepared Mac
+  worktree was pushed to the existing PR branch. Existing uncommitted work in
+  `my-portfolio-dan` was preserved.
+- Preview commit `cc8c3e52579950986fde287bd4653862d45cbdad` reached Vercel READY
+  (deployment `dpl_B7gJpCREiLNrWVVVQW7qSUzE3XJf`). GitHub Actions run
+  `35248485680` passed lint, typecheck, ten tests, and the production build.
+- The revised hosted homepage and email-draft review page were inspected in the
+  browser. Narrow-viewport interactive checks remain pending.
+- Desktop review identified an oversized hero headline; this revision shortens
+  the headline and reduces its size to bring the primary action higher.
+- DNS checks from the Mac and Google Public DNS returned NXDOMAIN for the domain
+  and its mail records. Vercel reported registration availability at $11.25 for
+  one year on September 17, 2026. No domain purchase was made.
 
 ## Publication mode update
 

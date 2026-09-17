@@ -19,7 +19,7 @@ const Home = () => {
               HVAC · Plumbing · Roofing
             </span>
             <h1>
-              Websites built to help home-service contractors{" "}
+              Websites that help contractors{" "}
               <em>win more jobs.</em>
             </h1>
             <p>
