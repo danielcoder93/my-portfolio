@@ -1,154 +1,78 @@
+import Image from "next/image";
 import Link from "next/link";
 import SiteHead from "../components/SiteHead";
 import styles from "../styles/Site.module.scss";
-
-const OurWork = () => {
-  return (
-    <>
-      <SiteHead
-        title="Our Work"
-        description="See Created Revolution's prior web development capabilities and its transparent path toward home-service contractor case studies."
-        path="/our-work"
-      />
-
-      <header className={styles.pageHero}>
-        <div className="site-container">
-          <span className="eyebrow">Our work</span>
-          <h1>Real capabilities. Honest proof. No borrowed contractor wins.</h1>
-          <p>
-            Created Revolution is repositioning around HVAC, plumbing, and
-            roofing. Until the first home-service case studies are complete,
-            this page separates verified past development work from the proof we
-            are actively building.
-          </p>
+export default function OurWork() {
+  return <>
+    <SiteHead title="Our Work" description="Explore Created Revolution’s residential-service website work for Raisa Pugliese Cleaning Services in Sarasota and its founding contractor website offer." path="/our-work" />
+    <header className={styles.pageHero}><div className="site-container">
+      <span className="eyebrow">Selected work</span>
+      <h1>Useful websites for real businesses.</h1>
+      <p>See how clear services, real project examples, and a simple contact path come together. Daniel handles the website strategy, design, and development.</p>
+    </div></header>
+    <section className="section" id="raisa"><div className="site-container">
+      <div className={styles.featuredWork}>
+        <a href="https://www.raisapugliesecleaningservices.com/" target="_blank" rel="noreferrer" className={styles.projectPreview}>
+          <Image src="/raisa-website.jpg" alt="Live homepage of Raisa Pugliese Cleaning Services, featuring service details and an interactive cleaning comparison" width={1348} height={926} sizes="(max-width: 760px) 100vw, 50vw" />
+        </a>
+        <div><span className="eyebrow">Residential cleaning · Sarasota, FL</span>
+          <h2>Raisa Pugliese Cleaning Services</h2>
+          <p>A website focused on recurring residential cleaning, with a clear
+            explanation of each service and direct access to the owner.</p>
+          <ul className={styles.checkList}>
+            <li>Separate recurring, deep, and move-in/out service pages</li>
+            <li>Service-area information for Sarasota-area homeowners</li>
+            <li>Real before-and-after cleaning examples</li>
+            <li>Quote requests, call links, and text options</li>
+            <li>Page titles, canonical URLs, sitemap, and business markup</li>
+          </ul>
+          <a href="https://www.raisapugliesecleaningservices.com/" target="_blank" rel="noreferrer" className="button button-secondary">Visit Raisa’s Website ↗</a>
         </div>
-      </header>
-
-      <section className="section">
-        <div className={`site-container ${styles.proofIntro}`}>
-          <h2>We will not pretend unrelated projects are contractor results.</h2>
-          <div>
-            <p>
-              Past work shows the ability to design, develop, integrate, and
-              launch working digital products. It does not prove a roofing
-              company ranked first or an HVAC company added a certain amount of
-              revenue.
-            </p>
-            <p>
-              The home-service portfolio will be built in public with clear
-              before-and-after evidence: site quality, page coverage, local
-              visibility, tracked calls, and client-approved outcomes.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="section" style={{ background: "var(--cream)" }}>
-        <div className="site-container">
-          <div className="section-heading">
-            <span className="eyebrow">Selected prior capabilities</span>
-            <h2>Web systems built before the contractor focus.</h2>
-          </div>
-          <div className={styles.workGrid}>
-            <article className={styles.workCard}>
-              <span>Archived prior project · Shopify · Node.js</span>
-              <h3>Value Lock Sports</h3>
-              <p>
-                Prior Shopify theme migration with custom storefront features,
-                scheduled membership-status automation, and newsletter
-                functionality. This project is archived and is not presented
-                as a currently active website.
-              </p>
-            </article>
-            <article className={styles.workCard}>
-              <span>Verified live project · React · WordPress</span>
-              <h3>Dusk RE</h3>
-              <p>
-                Responsive real-estate website using a React-based front end and
-                WordPress content management, deployed across Vercel and
-                SiteGround.
-              </p>
-              <a
-                href="https://www.duskre.com/"
-                target="_blank"
-                rel="noreferrer"
-                className={styles.workLink}
-              >
-                Visit Dusk RE
-                <span aria-hidden="true">↗</span>
-              </a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="site-container">
-          <div className={styles.foundingOffer}>
-            <div>
-              <span className="eyebrow">Founding Partner Project</span>
-              <h2>
-                One complimentary website build for a Sarasota-area HVAC,
-                plumbing, or roofing company.
-              </h2>
-              <p>
-                Created Revolution is selecting one qualified HVAC, plumbing,
-                or roofing company for a modern, conversion-focused website at
-                no design or development cost. In return, we ask for timely
-                feedback, accurate business information, and permission to
-                document the project. Any testimonial or performance results
-                will only be shared with the company’s approval.
-              </p>
-            </div>
-            <div className={styles.foundingOfferDetails}>
-              <div className={styles.foundingOfferGroup}>
-                <h3>What the selected company receives</h3>
-                <ul>
-                  <li>Strategy and conversion-focused website build</li>
-                  <li>Core service-page structure</li>
-                  <li>Local search and Google profile review</li>
-                  <li>Basic calls-and-forms measurement setup</li>
-                </ul>
-              </div>
-              <div className={styles.foundingOfferGroup}>
-                <h3>What Created Revolution asks in return</h3>
-                <ul>
-                  <li>Timely access, content, and direct feedback</li>
-                  <li>Permission to document the real process</li>
-                  <li>An honest testimonial only if the work earns one</li>
-                </ul>
-              </div>
-              <Link
-                href="/free-website-review"
-                className="button button-secondary"
-              >
-                Apply for the Founding Build
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-compact">
-        <div className={`site-container ${styles.finalCta}`}>
-          <div>
-            <span className="eyebrow">Not applying for the free build?</span>
-            <h2>Your website can still get a direct review.</h2>
-            <p>
-              Request an honest assessment of the clearest conversion and local
-              visibility gaps.
-            </p>
-          </div>
-          <Link
-            href="/free-website-review"
-            className="button button-light"
-          >
-            Request a Free Review
-          </Link>
-        </div>
-      </section>
-    </>
-  );
-};
-
-export default OurWork;
+      </div>
+      <div className={styles.projectNotes}>
+        <article><h3>The business goal</h3><p>Help homeowners understand the cleaning options and inquire about recurring service.</p></article>
+        <article><h3>The website work</h3><p>Service structure, local information, owner-led presentation, project examples, and clearer contact choices.</p></article>
+        <article><h3>What this demonstrates</h3><p>A live residential-service website you can inspect. Lead and revenue outcomes are still being measured.</p></article>
+      </div>
+    </div></section>
+    <section className="section" style={{ background: "var(--cream)" }}><div className="site-container">
+      <div className="section-heading"><span className="eyebrow">Additional development work</span><h2>Experience beyond home services.</h2></div>
+      <article className={styles.workCard}>
+        <span>Real estate · React · WordPress</span><h3>Dusk RE</h3>
+        <p>Responsive real-estate website development with a React front end and WordPress content management.</p>
+        <a href="https://www.duskre.com/" target="_blank" rel="noreferrer" className={styles.workLink}>Visit Dusk RE ↗</a>
+      </article>
+    </div></section>
+    <section className="section" id="founding-build"><div className="site-container"><div className={styles.foundingOffer}>
+      <div><span className="eyebrow">Founding partner project</span>
+        <h2>One complimentary contractor website build.</h2>
+        <p>For one selected Sarasota-area HVAC, plumbing, or roofing company.
+          The design and development fee is waived in exchange for timely
+          content, feedback, and permission to document the work.</p>
+        <p>Applying starts a conversation. Selection, page scope, and any separate
+          costs are agreed before work begins. Any testimonial or published
+          performance results require the client’s approval.</p>
+        <p>Plan for four to eight weeks after the agreed content and account
+          access are ready.</p>
+      </div>
+      <div className={styles.foundingOfferDetails}>
+        <div className={styles.foundingOfferGroup}><h3>Included in the selected build</h3><ul>
+          <li>Up to five agreed pages and two revision rounds</li>
+          <li>Mobile layout, inquiry form, and contact links</li>
+          <li>Page titles, sitemap, and local profile review</li>
+          <li>Basic contact measurement and a launch handoff</li>
+        </ul></div>
+        <div className={styles.foundingOfferGroup}><h3>Separate costs, agreed in advance</h3><ul>
+          <li>Domain registration and hosting</li>
+          <li>Any paid email, call-tracking, or other third-party tools</li>
+          <li>Optional maintenance, extra pages, SEO, or advertising</li>
+        </ul><p className={styles.offerFinePrint}>The build does not enroll you in a recurring service. You keep ownership of your domain and receive your website source files at handoff.</p></div>
+        <Link href="/free-website-review?offer=founding-build" className="button button-secondary">Apply for the Founding Build</Link>
+      </div>
+    </div></div></section>
+    <section className="section-compact"><div className={`site-container ${styles.finalCta}`}>
+      <div><span className="eyebrow">A useful first step</span><h2>Get three priorities for your own website.</h2><p>Daniel will email a practical review within two business days.</p></div>
+      <Link href="/free-website-review" className="button button-light">Request a Free Review</Link>
+    </div></section>
+  </>;
+}

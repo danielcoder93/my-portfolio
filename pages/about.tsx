@@ -21,7 +21,7 @@ const About = () => {
           </h1>
           <p>
             Created Revolution helps home-service companies build a stronger
-            website, improve local visibility, and run focused campaigns with
+            website, improve local visibility, and track inquiries with
             clear expectations and direct communication.
           </p>
         </div>
@@ -80,10 +80,10 @@ const About = () => {
               </article>
               <article className={styles.principle}>
                 <span>02</span>
-                <h3>Original work over borrowed authority</h3>
+                <h3>Work you can inspect</h3>
                 <p>
-                  No copied graphics, fake testimonials, invented revenue, or
-                  contractor case studies that do not exist.
+                  See the pages, features, and decisions behind each project.
+                  Performance claims are backed by measured client outcomes.
                 </p>
               </article>
               <article className={styles.principle}>

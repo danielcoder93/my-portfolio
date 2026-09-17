@@ -1568,3 +1568,14 @@
     padding: 64px 0 54px;
   }
 }
+
+.featuredWork { display: grid; grid-template-columns: 1.05fr 1fr; align-items: center; gap: clamp(28px, 5vw, 64px); }
+.featuredWork h2 { margin-bottom: 22px; font-size: clamp(2rem, 3.7vw, 3rem); }
+.featuredWork p { margin-bottom: 22px; }
+.featuredWork ul { margin-bottom: 28px; }
+.projectPreview { display: block; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: var(--cream); box-shadow: var(--shadow-sm); }
+.projectPreview img { width: 100%; height: auto; }
+.projectNotes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 48px; padding-top: 36px; border-top: 1px solid var(--line); }
+.projectNotes h3 { margin-bottom: 14px; }
+.offerFinePrint { margin-top: 24px; font-size: 0.92rem; }
+@media (max-width: 760px) { .featuredWork, .projectNotes { grid-template-columns: minmax(0, 1fr); } }

@@ -28,9 +28,7 @@ const organizationSchema = {
   knowsAbout: [
     "Contractor website design",
     "Local SEO",
-    "Google Local Services Ads",
-    "Contractor social media",
-    "Facebook and Instagram advertising",
+    "Inquiry tracking",
   ],
 };
 

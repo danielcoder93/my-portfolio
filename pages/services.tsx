@@ -15,24 +15,7 @@ const serviceOverview = [
     description: "A stronger technical and local-search foundation.",
     href: "#contractor-seo",
   },
-  {
-    number: "03",
-    title: "Local Services Ads",
-    description: "Setup and support for high-intent Google inquiries.",
-    href: "#local-services-ads",
-  },
-  {
-    number: "04",
-    title: "Social Media",
-    description: "Consistent proof that keeps your company recognizable.",
-    href: "#social-media",
-  },
-  {
-    number: "05",
-    title: "Facebook Ads",
-    description: "Focused local campaigns with clear tracking and reporting.",
-    href: "#facebook-ads",
-  },
+  { number: "03", title: "Inquiry Tracking & Contact Setup", description: "A tested path from a website visit to your inbox.", href: "#inquiry-tracking" },
 ];
 
 const serviceDetails = [
@@ -71,55 +54,11 @@ const serviceDetails = [
     note: "No honest agency can guarantee a specific Google ranking. The work focuses on clear best practices, useful content, and measurable progress.",
   },
   {
-    id: "local-services-ads",
-    number: "03",
-    label: "Reach active searchers",
-    title: "Google Local Services Ads setup and support",
-    description:
-      "Local Services Ads can place eligible contractors in a prominent part of Google when nearby homeowners search for help. We can guide setup, organize account details, and help manage the settings that affect which inquiries you receive.",
-    items: [
-      "Eligibility and account review",
-      "Verification-document guidance",
-      "Service area and job-type setup",
-      "Budget, schedule, and profile settings",
-      "Call and message routing review",
-      "Lead-status tracking and performance reporting",
-    ],
-    note: "Eligibility, verification, ad placement, and lead volume are controlled by Google and vary by business category, location, budget, and competition.",
-  },
-  {
-    id: "social-media",
-    number: "04",
-    label: "Stay recognizable",
-    title: "Contractor social media content support",
-    description:
-      "Homeowners often check a contractor’s recent work before making contact. We help turn your real projects, team, reviews, and useful advice into a consistent social presence that supports trust.",
-    items: [
-      "Monthly content planning",
-      "Branded post templates",
-      "Project, review, and team spotlights",
-      "Caption writing and scheduling support",
-      "Facebook and Instagram profile cleanup",
-      "Simple engagement and content reporting",
-    ],
-    note: "The strongest content comes from real jobsite photos, customer-approved stories, and accurate updates supplied by your company.",
-  },
-  {
-    id: "facebook-ads",
-    number: "05",
-    label: "Create targeted demand",
-    title: "Facebook and Instagram ads for contractors",
-    description:
-      "Meta ads can help contractors promote a clear service, seasonal offer, or estimate opportunity to homeowners in selected areas. We build focused campaigns and connect the response path so inquiries reach the right place.",
-    items: [
-      "Offer and campaign planning",
-      "Campaign and audience setup",
-      "Ad copy and creative direction",
-      "Landing page or instant-form setup",
-      "Basic tracking and inquiry routing",
-      "Performance reporting and practical adjustments",
-    ],
-    note: "Advertising spend is paid directly to Meta and is separate from management fees. Results vary, so campaigns begin with a defined test and budget rather than a lead guarantee.",
+    id: "inquiry-tracking", number: "03", label: "Know where inquiries come from",
+    title: "Inquiry tracking and contact setup",
+    description: "Make sure a homeowner can reach you, the request arrives in the right place, and your team knows what prompted it. We connect the contact path and verify it before launch.",
+    items: ["Working estimate forms and email routing", "Mobile click-to-call and text links", "Campaign source captured with form inquiries", "Contact-action and conversion measurement", "Success and error handling", "A practical lead follow-up process"],
+    note: "A click is not a booked job. Call-tracking numbers and other paid tools are agreed separately if needed; your team confirms which inquiries become customers.",
   },
 ];
 
@@ -128,7 +67,7 @@ const Services = () => {
     <>
       <SiteHead
         title="Contractor Marketing Services"
-        description="Contractor website design, local SEO, Local Services Ads, social media, and Facebook Ads for HVAC, plumbing, and roofing companies."
+        description="Website design, local SEO foundations, and inquiry tracking for HVAC, plumbing, and roofing companies."
         path="/services"
       />
 
@@ -137,12 +76,12 @@ const Services = () => {
           <div className={styles.servicesHeroCopy}>
             <span className="eyebrow">Contractor Marketing Services</span>
             <h1>
-              Show up clearly wherever local homeowners are looking.
+              Make it easier to find you, trust you, and contact you.
             </h1>
             <p>
               Created Revolution helps HVAC, plumbing, and roofing companies
-              build a stronger website, improve local visibility, and run
-              focused campaigns with a clear path from attention to inquiry.
+              build a useful website, improve local visibility, and connect
+              a reliable path from a visit to an inquiry.
             </p>
             <div className={styles.buttonRow}>
               <Link
@@ -156,7 +95,7 @@ const Services = () => {
               </a>
             </div>
             <p className={styles.servicesHeroProof}>
-              Founder-led · Clear project scopes · No ranking or lead guarantees
+              Founder-led · Clear project scopes · Tested before launch
             </p>
           </div>
 
@@ -165,7 +104,7 @@ const Services = () => {
             aria-label="Contractor marketing service stack"
           >
             <div className={styles.servicesBoardHeader}>
-              <span>Five focused services</span>
+              <span>Three core services</span>
             </div>
             <div className={styles.servicesBoardRows}>
               {serviceOverview.map((service) => (
@@ -180,7 +119,7 @@ const Services = () => {
               ))}
             </div>
             <div className={styles.servicesBoardFooter}>
-              Start with the website. Add the channels that fit your goals.
+              Website. Local visibility. A contact path that works.
             </div>
           </div>
         </div>
@@ -190,7 +129,7 @@ const Services = () => {
         <div className="site-container">
           <div className="section-heading">
             <span className="eyebrow">Choose your starting point</span>
-            <h2>Five services. One clear customer journey.</h2>
+            <h2>Three essentials. One practical starting point.</h2>
             <p>
               Each service can solve a specific problem. The best plan starts
               with the weakest part of your current online presence.
@@ -248,7 +187,7 @@ const Services = () => {
         <div className="site-container">
           <div className="section-heading">
             <span className="eyebrow">What we can build and support</span>
-            <h2>Contractor-focused services without oversized promises.</h2>
+            <h2>What your project can include.</h2>
             <p>
               Every scope is based on your current website, service area,
               priorities, available content, and ability to respond to leads.
@@ -381,20 +320,10 @@ const Services = () => {
               </p>
             </details>
             <details>
-              <summary>Can every contractor use Local Services Ads?</summary>
-              <p>
-                No. Availability and verification requirements vary by service
-                category and location. Google makes the final eligibility and
-                approval decisions.
-              </p>
-            </details>
-            <details>
-              <summary>What is the difference between social media and Facebook Ads?</summary>
-              <p>
-                Social media support keeps your public profiles active with
-                real company content. Facebook and Instagram ads use a separate
-                paid budget to promote a specific offer to selected audiences.
-              </p>
+              <summary>Can you help if we already run ads?</summary>
+              <p>Yes. We can review your landing pages, forms, and inquiry tracking
+                and coordinate with your advertising provider. Paid campaign
+                management is scoped separately when delivery support is in place.</p>
             </details>
             <details>
               <summary>How long does a website build take?</summary>

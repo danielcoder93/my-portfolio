@@ -11,7 +11,7 @@ const Footer = () => {
             <strong>Created Revolution</strong>
           </Link>
           <p>
-            Websites, local visibility, and focused campaigns for HVAC,
+            Websites, local visibility, and inquiry tracking for HVAC,
             plumbing, and roofing companies.
           </p>
           <a href="mailto:dan@createdrevolution.com">

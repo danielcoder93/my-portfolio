@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import SiteHead from "../components/SiteHead";
 import styles from "../styles/Site.module.scss";
 
@@ -6,7 +7,8 @@ const Home = () => {
   return (
     <>
       <SiteHead
-        description="Created Revolution provides contractor website design, local SEO, Local Services Ads, social media, and Facebook Ads for HVAC, plumbing, and roofing companies."
+        title="Websites & Local SEO for Contractors"
+        description="Contractor websites, local search foundations, and inquiry tracking for HVAC, plumbing, and roofing companies. Get three practical fixes in a free website review."
         path="/"
       />
 
@@ -14,16 +16,16 @@ const Home = () => {
         <div className={`site-container ${styles.heroGrid}`}>
           <div className={styles.heroCopy}>
             <span className="eyebrow">
-              HVAC · Plumbing · Roofing growth partner
+              HVAC · Plumbing · Roofing
             </span>
             <h1>
               Websites built to help home-service contractors{" "}
               <em>win more jobs.</em>
             </h1>
             <p>
-              Created Revolution brings your website, local visibility, and
-              focused campaigns into one clear plan—so homeowners can find,
-              trust, and contact your company.
+              A clear website, stronger local visibility, and a reliable way to
+              receive inquiries. Work directly with Daniel to help homeowners
+              find your services and request an estimate.
             </p>
             <div className={styles.buttonRow}>
               <Link
@@ -38,7 +40,7 @@ const Home = () => {
             </div>
             <div className={styles.microProof}>
               <span aria-hidden="true" />
-              Founder-led · Clear scope · Practical contractor-focused work
+              Based in Sarasota · Work directly with Daniel · Defined project scope
             </div>
           </div>
 
@@ -140,10 +142,10 @@ const Home = () => {
         <div className="site-container">
           <div className="section-heading">
             <span className="eyebrow">The Created Revolution system</span>
-            <h2>Five focused services built around the same customer journey.</h2>
+            <h2>A stronger foundation for your next inquiry.</h2>
             <p>
-              Start with the website and local-search foundation. Add paid or
-              social campaigns when they match your market and goals.
+              Start with three essentials: a useful website, accurate local
+              information, and a contact path you can measure.
             </p>
           </div>
           <div className={styles.systemGrid}>
@@ -164,34 +166,36 @@ const Home = () => {
               </p>
             </article>
             <article className={styles.systemCard}>
-              <span>03 / Reach searchers</span>
-              <h3>Google Local Services Ads</h3>
-              <p>
-                Set up and support eligible accounts around the right services,
-                service areas, schedule, budget, and inquiry path.
-              </p>
-            </article>
-            <article className={styles.systemCard}>
-              <span>04 / Stay recognizable</span>
-              <h3>Social media content</h3>
-              <p>
-                Turn real projects, reviews, team updates, and helpful advice
-                into a more consistent local presence.
-              </p>
-            </article>
-            <article className={styles.systemCard}>
-              <span>05 / Promote</span>
-              <h3>Facebook and Instagram ads</h3>
-              <p>
-                Build focused local campaigns with a defined offer, response
-                path, tracking setup, and practical reporting.
-              </p>
+              <span>03 / Measure</span>
+              <h3>Inquiry tracking and contact setup</h3>
+              <p>Connect forms to the right inbox, track contact actions, and
+                see which campaigns bring inquiries. Test the path before launch.</p>
             </article>
           </div>
           <div className={styles.buttonRow} style={{ marginTop: "34px" }}>
             <Link href="/services" className="button button-light">
-              Explore Every Service
+              See What Is Included
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section" style={{ background: "var(--cream)" }}>
+        <div className={`site-container ${styles.featuredWork}`}>
+          <Link href="/our-work#raisa" className={styles.projectPreview}>
+            <Image src="/raisa-website.jpg" alt="Raisa Pugliese Cleaning Services website, with a Sarasota service headline, quote links, and real cleaning examples" width={1348} height={926} sizes="(max-width: 760px) 100vw, 50vw" />
+          </Link>
+          <div>
+            <span className="eyebrow">Recent residential-service work</span>
+            <h2>A clearer website for a Sarasota cleaning business.</h2>
+            <p>Raisa Pugliese Cleaning Services brings its recurring cleaning
+              offer, service details, real work, and quote requests together.</p>
+            <ul className={styles.checkList}>
+              <li>Dedicated recurring, deep, and move-cleaning pages</li>
+              <li>Owner-led messaging and before-and-after examples</li>
+              <li>Prominent quote, call, and text options</li>
+            </ul>
+            <Link href="/our-work#raisa" className="button button-secondary">Explore the Project</Link>
           </div>
         </div>
       </section>
@@ -273,7 +277,7 @@ const Home = () => {
           </div>
           <div className={styles.buttonRow} style={{ marginTop: "34px" }}>
             <Link href="/industries" className="button button-secondary">
-              See Every Industry Page
+              Explore Your Industry
             </Link>
           </div>
         </div>
@@ -321,8 +325,8 @@ const Home = () => {
             <span className="eyebrow">Start with clarity</span>
             <h2>Find out what is costing your company calls.</h2>
             <p>
-              Request a free review and get a direct, contractor-focused look at
-              your website, local visibility, and conversion path.
+              Get three priority fixes and a practical next step by email within
+              two business days. Daniel reviews your website personally.
             </p>
           </div>
           <Link

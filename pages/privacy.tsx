@@ -14,7 +14,7 @@ const Privacy = () => {
         <div className="narrow-container">
           <span className="eyebrow">Privacy policy</span>
           <h1>How website-review information is handled.</h1>
-          <p>Effective July 30, 2026</p>
+          <p>Effective September 17, 2026</p>
         </div>
       </header>
 
@@ -28,9 +28,9 @@ const Privacy = () => {
 
           <h2>Information you provide</h2>
           <p>
-            When you submit a form, information may include your name, company,
+            When you submit a form, information includes your selected offer, name, company,
             trade, service area, website, email address, phone number, and the
-            marketing challenge you describe.
+            marketing challenge you describe. Phone and project details are optional.
           </p>
 
           <h2>How information is used</h2>
@@ -43,11 +43,19 @@ const Privacy = () => {
 
           <h2>Analytics and service providers</h2>
           <p>
-            This website may use hosting, analytics, email, form, and
-            measurement providers. Those providers may process technical data
-            such as IP address, device details, pages viewed, and referral
-            source under their own terms.
+            The website is hosted on Vercel and uses an email provider to deliver inquiries. These providers process the information needed to operate the site and deliver messages. Hosting logs may include technical data such as IP addresses.
           </p>
+
+          <h2>Inquiry source measurement</h2>
+          <p>During your visit, session storage remembers campaign labels, the
+            landing page path, and the referring website hostname. These details
+            accompany your request so Daniel can understand which outreach led
+            to the inquiry. This storage lasts for the browser tab’s session and
+            does not contain your form details. Full referral URLs and advertising
+            click identifiers are not collected by this feature.</p>
+          <p>After the email provider accepts a request, a technical log records
+            the request reference and selected offer. Form details are sent in
+            the notification email, not in this conversion log.</p>
 
           <h2>Sharing and sales</h2>
           <p>

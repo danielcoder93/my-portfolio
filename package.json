@@ -2,7 +2,7 @@
   "name": "created-revolution",
   "version": "1.0.0",
   "private": true,
-  "description": "Created Revolution — website and marketing services for HVAC, plumbing, and roofing contractors.",
+  "description": "Created Revolution \u2014 website and marketing services for HVAC, plumbing, and roofing contractors.",
   "engines": {
     "node": "22.x"
   },
@@ -11,7 +11,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "tsc -p tsconfig.test.json && node --test .test-build/tests/*.test.js",
+    "verify:email": "tsc -p tsconfig.test.json && node .test-build/scripts/check-email.js"
   },
   "dependencies": {
     "next": "16.2.12",

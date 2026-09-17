@@ -101,3 +101,12 @@
     width: 100%;
   }
 }
+
+.fields { display: flex; min-width: 0; padding: 0; margin: 0; border: 0; flex-direction: column; gap: 20px; }
+.formTitle { margin-bottom: 12px; font-size: clamp(1.4rem, 3vw, 1.9rem); }
+.optional { padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.optional summary { cursor: pointer; font-weight: 700; font-size: 0.9rem; }
+.optional[open] summary { margin-bottom: 20px; }
+.offerNote { padding: 14px; border-radius: 12px; background: var(--cream); font-size: 0.9rem; }
+.feedback:empty { display: none; }
+.success p { color: inherit; margin-top: 14px; overflow-wrap: anywhere; }
