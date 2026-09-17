@@ -1,34 +1,93 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Created Revolution
 
-## Getting Started
+Agency website for HVAC, plumbing, and roofing companies, built with Next.js
+Pages Router, React, TypeScript, Sass, and Nodemailer.
 
-First, run the development server:
+## Local development
+
+Use Node.js 22 (the version pinned in `package.json` and CI).
 
 ```bash
+npm ci
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Without email credentials, the review page offers an explicit email draft addressed
+to Daniel. Visitors must send it in their own email app; opening the draft is not
+counted as a submitted lead. Once the six SMTP settings validate, the page presents
+the direct submission form. Runtime delivery failures retain the email fallback.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Validation
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+npm run lint
+npm run typecheck
+npm test
+npm run build
+node scripts/smoke-http.cjs
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+CI runs these commands for pull requests to `main` and pushes to `main`.
+The tests cover lead validation, offer/source context, notification content,
+mail configuration, success/failure reporting, and rejected requests. They use
+an injected mail sender; they do not prove real SMTP or inbox delivery.
 
-## Learn More
+## Email configuration
 
-To learn more about Next.js, take a look at the following resources:
+Use a transactional SMTP provider with a verified sender. Set `SMTP_HOST`,
+`SMTP_PORT` (587, 465, or 2525), `SMTP_USER`, `SMTP_PASSWORD`,
+`CONTACT_FROM_EMAIL`, and `CONTACT_TO_EMAIL` in Vercel **Preview** and
+**Production**, then redeploy. Never commit populated environment files.
+Only one recipient and one sender mailbox are supported. The SMTP username
+may be an API username; it is not used as the notification recipient.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The old `EMAIL_USER` / `EMAIL_PASSWORD` / `EMAIL_SERVICE` configuration is
+intentionally no longer read. A personal Outlook/Hotmail sign-in password is
+not a supported replacement; [Microsoft requires modern authentication](https://support.microsoft.com/en-us/outlook/pop-imap-and-smtp-settings-for-outlook-com).
+Existing leaked credentials must be invalidated in the account that issued them.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+After credentials are configured locally, check authentication without sending:
 
-## Deploy on Vercel
+```bash
+npm run verify:email
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To send a clearly labeled test to the configured owner inbox:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+npm run verify:email -- --send-test
+```
+
+Provider acceptance is not proof of inbox delivery. Check receipt, spam folder,
+and Reply before considering the form ready. See [the launch checklist](docs/LAUNCH.md).
+
+## Offer and attribution
+
+- `/free-website-review`: three priority fixes, delivered by email within two business days.
+- `/free-website-review?offer=founding-build`: selected founding-build application.
+- Optional phone and challenge are optional on the client **and** server.
+- The form accepts bare website domains and removes website query/fragment data.
+- Session storage preserves campaign source/medium/name, landing path, and referring
+  hostname across internal navigation. No form values are stored in the browser.
+- Notifications include offer, source, and request ID; successful provider acceptance
+  emits a `lead_submitted` server-log event with ID and offer only.
+- Source data in the inbox is the initial reporting record. There is no CRM, GA4
+  collector, durable queue, or separate lead database in this implementation.
+- The API limits bodies to 12 KB, validates requests, requires JSON, checks browser
+  origins, escapes email content, and rejects the honeypot. These do not replace
+  deployment-level rate limiting; see the checklist before scaling traffic.
+
+## Portfolio evidence
+
+Raisa’s public homepage was inspected on September 17, 2026. Its screenshot is
+stored at `public/raisa-website.jpg`. The project copy describes observable website
+work, not measured lead, ranking, or revenue improvements. Do not present Raisa’s
+cleaning reviews as testimonials about the agency.
+
+## Deployment
+
+Git pushes to PR #17 update its Vercel preview. The email-draft mode permits publishing without relying on the old SMTP password.
+Credential rotation and real inbox testing remain account-level tasks. Verify
+the SMTP form after configuring a fresh sender before using it for outreach. The source pins
+Node 22; Vercel’s older project-level Node setting should be aligned with it.

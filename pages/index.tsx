@@ -1,153 +1,344 @@
-import React from "react";
-import Section from "../components/Section";
-import Hero from "../components/Hero";
-import Classes from "../styles/Home.module.scss";
-import HowWeWork from "../components/SectionHowWork";
-import { Grid } from "@mui/material";
-import Carousel from "react-material-ui-carousel";
-import { Paper, Button } from "@mui/material";
 import Link from "next/link";
 import Image from "next/image";
-import dusk from "../public/Dusktest.png";
-import value from "../public/valuetest.png";
-import { StaticImageData } from "next/image";
-type Item = {
-  image: StaticImageData;
-  imageAlt: string;
-  name: string;
-  description: string;
-  link: string;
-};
-
-const items: Array<Item> = [
-  {
-    image: dusk,
-    imageAlt: "DUSK RE Logo",
-    name: "DUSK RE",
-    description:
-      "I couldn't be happier with the website that was created for my business by this web agency. After launching our new website, we received numerous compliments from potential clients, and many of them were asking us why we weren't already working together. The website perfectly represented our brand, and the functionality and user experience were top-notch. The team was incredibly professional and easy to work with throughout the entire process. I would highly recommend this web agency to any business owner looking for a high-quality website that will elevate their brand and drive conversions.",
-    link: "/duskre",
-  },
-  {
-    image: value,
-    imageAlt: "VIP SPORTS Logo",
-    name: "VIP SPORTS",
-    description:
-      "I am so grateful for the website that was created for my business by this web agency. The team truly listened to my needs and developed a website that perfectly represented my brand and showcased my products. The website is easy to navigate, and the user experience is excellent. The best part is that the website has freed up so much of my time, allowing me to focus on other aspects of my business. I no longer have to worry about maintaining a website or troubleshooting technical issues. The team at this web agency has truly exceeded my expectations, and I would highly recommend them to anyone looking for a high-quality website that will help grow their business.",
-    link: "/value-lock-vip",
-  },
-];
-
-const CarouselItem = (item: Item) => (
-  <Section bg="light">
-    <div className={Classes.content}>
-      <div className={Classes.imageWrapper}>
-        <div className={Classes.imageContainer}>
-          <Image
-            src={item.image}
-            alt={item.imageAlt}
-            width={300}
-            height={300}
-          />
-        </div>
-      </div>
-      <div className={Classes.textWrapper}>
-        <h2>{item.name}</h2>
-        <p>{item.description}</p>
-        <Link href={item.link}>View Case Study</Link>
-      </div>
-    </div>
-  </Section>
-);
+import SiteHead from "../components/SiteHead";
+import styles from "../styles/Site.module.scss";
 
 const Home = () => {
   return (
     <>
-      <Hero />
-      <Section bg="light">
-        <Grid
-          container
-          spacing={"1rem"}
-          direction="row"
-          text-align="center"
-          align-items="center"
-          padding={"2rem 0"}
-        >
-          <Grid item xs={12} md={6} lg={3}>
-            <h2>High-Quality Custom Designs</h2>
+      <SiteHead
+        title="Websites & Local SEO for Contractors"
+        description="Contractor websites, local search foundations, and inquiry tracking for HVAC, plumbing, and roofing companies. Get three practical fixes in a free website review."
+        path="/"
+      />
+
+      <section className={styles.hero}>
+        <div className={`site-container ${styles.heroGrid}`}>
+          <div className={styles.heroCopy}>
+            <span className="eyebrow">
+              HVAC · Plumbing · Roofing
+            </span>
+            <h1>
+              Websites that help contractors{" "}
+              <em>win more jobs.</em>
+            </h1>
             <p>
-              Our creative team specializes in creating intuitive, modern, and
-              impactful designs tailored meet each individual customer’s needs.
+              A clear website, stronger local visibility, and a reliable way to
+              receive inquiries. Work directly with Daniel to help homeowners
+              find your services and request an estimate.
             </p>
-          </Grid>
-          <Grid item xs={12} md={6} lg={3}>
-            <h2>Proven Development Process</h2>
+            <div className={styles.buttonRow}>
+              <Link
+                href="/free-website-review"
+                className="button button-primary"
+              >
+                Request a Free Website Review
+              </Link>
+              <Link href="/services" className="button button-secondary">
+                See the System
+              </Link>
+            </div>
+            <div className={styles.microProof}>
+              <span aria-hidden="true" />
+              Based in Sarasota · Work directly with Daniel · Defined project scope
+            </div>
+          </div>
+
+          <div className={styles.pipeline} aria-label="Lead pipeline example">
+            <div className={styles.pipelineTop}>
+              <p>Local job pipeline</p>
+              <span className={styles.liveTag}>Working together</span>
+            </div>
+            <div className={styles.pipelineSteps}>
+              <div className={styles.pipelineStep}>
+                <span>01</span>
+                <div>
+                  <strong>Local search</strong>
+                  <small>Be found for high-intent services</small>
+                </div>
+                <span>Visibility</span>
+              </div>
+              <div className={styles.pipelineStep}>
+                <span>02</span>
+                <div>
+                  <strong>Conversion-ready website</strong>
+                  <small>Make calling the obvious next step</small>
+                </div>
+                <span>Trust</span>
+              </div>
+              <div className={styles.pipelineStep}>
+                <span>03</span>
+                <div>
+                  <strong>Lead tracking and contact setup</strong>
+                  <small>See where inquiries come from</small>
+                </div>
+                <span>Lead source</span>
+              </div>
+            </div>
+            <div className={styles.pipelineFooter}>
+              <p>
+                Primary action
+                <strong>Calls and estimates</strong>
+              </p>
+              <span aria-hidden="true">→</span>
+              <p>
+                Useful insight
+                <strong>Clearer lead sources</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className={styles.tradeBar}>
+        <div className={`site-container ${styles.tradeBarInner}`}>
+          <p>Built specifically for local operators</p>
+          <div className={styles.trade}>
+            <span aria-hidden="true">AC</span>
+            HVAC
+          </div>
+          <div className={styles.trade}>
+            <span aria-hidden="true">PL</span>
+            Plumbing
+          </div>
+          <div className={styles.trade}>
+            <span aria-hidden="true">RF</span>
+            Roofing
+          </div>
+        </div>
+      </div>
+
+      <section className="section">
+        <div className={`site-container ${styles.splitIntro}`}>
+          <div>
+            <span className="eyebrow">The real problem</span>
             <p>
-              We use a proven development process to ensure efficiency,
-              accuracy, and the highest level of quality for all of our
-              projects.
+              Most contractor sites act like digital brochures. They list
+              services, show a phone number, and hope a homeowner figures out
+              why to choose the company.
             </p>
-          </Grid>
-          <Grid item xs={12} md={6} lg={3}>
-            <h2>Wealth of Experience</h2>
+          </div>
+          <div>
+            <h2>
+              You do not need prettier marketing. You need a clearer path to the
+              next booked job.
+            </h2>
             <p>
-              Our talented team of web developers, architects, and designers has
-              a wealth of experience developing websites and web applications
-              for businesses of all sizes.
+              Your best prospects are already searching. The opportunity is to
+              show up for the right services, earn trust quickly, make the call
+              easy, and close the loop when a lead comes in.
             </p>
-          </Grid>
-          <Grid item xs={12} md={6} lg={3}>
-            <h2>Comprehensive Support</h2>
+            <ul className={styles.checkList}>
+              <li>Service and city pages matched to real local demand</li>
+              <li>Mobile-first calls to action for urgent homeowners</li>
+              <li>Google Business Profile and website working in sync</li>
+              <li>Tracking that connects marketing activity to real leads</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-dark">
+        <div className="site-container">
+          <div className="section-heading">
+            <span className="eyebrow">The Created Revolution system</span>
+            <h2>A stronger foundation for your next inquiry.</h2>
             <p>
-              We provide comprehensive support packages to ensure that our
-              customers have the resources they need to constantly improve their
-              websites. From weekly check-ins, to bug fixes and maintenance, we
-              strive to keep our customers’ websites up-to-date and running
-              smoothly.
+              Start with three essentials: a useful website, accurate local
+              information, and a contact path you can measure.
             </p>
-          </Grid>
-        </Grid>
-      </Section>
-      {/* <Section bg="light">
-        <p>
-          As a web agency, we are committed to delivering the highest quality
-          products and services to your clients. Our team of professionals is
-          highly skilled and experienced in all aspects of web design and
-          development, ensuring that every project is completed with precision
-          and attention to detail.
-        </p>
-        <p>
-          In addition to technical expertise, our agency values strong
-          communication and collaboration with clients. We understand that a
-          successful project requires a close working relationship and a deep
-          understanding of our clients needs and goals. By working closely with
-          our clients and keeping them informed every step of the way, you are
-          able to deliver personalized solutions that exceed their expectations.
-          With our agency, clients can trust that their website will be in good
-          hands from start to finish.
-        </p>
-      </Section> */}
-      <Section bg="light">
-        <Carousel>
-          {items.map((item) => (
-            <CarouselItem key={item.name} {...item} />
-          ))}
-        </Carousel>
-      </Section>
-      <HowWeWork />
+          </div>
+          <div className={styles.systemGrid}>
+            <article className={styles.systemCard}>
+              <span>01 / Build</span>
+              <h3>Website design and development</h3>
+              <p>
+                Create fast, professional service pages that explain the work,
+                establish trust, and make contacting you easy.
+              </p>
+            </article>
+            <article className={styles.systemCard}>
+              <span>02 / Get found</span>
+              <h3>SEO for contractors</h3>
+              <p>
+                Improve site structure, local relevance, Google Business
+                Profile alignment, and search measurement.
+              </p>
+            </article>
+            <article className={styles.systemCard}>
+              <span>03 / Measure</span>
+              <h3>Inquiry tracking and contact setup</h3>
+              <p>Connect forms to the right inbox, track contact actions, and
+                see which campaigns bring inquiries. Test the path before launch.</p>
+            </article>
+          </div>
+          <div className={styles.buttonRow} style={{ marginTop: "34px" }}>
+            <Link href="/services" className="button button-light">
+              See What Is Included
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section" style={{ background: "var(--cream)" }}>
+        <div className={`site-container ${styles.featuredWork}`}>
+          <Link href="/our-work#raisa" className={styles.projectPreview}>
+            <Image src="/raisa-website.jpg" alt="Raisa Pugliese Cleaning Services website, with a Sarasota service headline, quote links, and real cleaning examples" width={1348} height={926} sizes="(max-width: 760px) 100vw, 50vw" />
+          </Link>
+          <div>
+            <span className="eyebrow">Recent residential-service work</span>
+            <h2>A clearer website for a Sarasota cleaning business.</h2>
+            <p>Raisa Pugliese Cleaning Services brings its recurring cleaning
+              offer, service details, real work, and quote requests together.</p>
+            <ul className={styles.checkList}>
+              <li>Dedicated recurring, deep, and move-cleaning pages</li>
+              <li>Owner-led messaging and before-and-after examples</li>
+              <li>Prominent quote, call, and text options</li>
+            </ul>
+            <Link href="/our-work#raisa" className="button button-secondary">Explore the Project</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="site-container">
+          <div className={styles.offer}>
+            <div className={styles.offerCopy}>
+              <span className="eyebrow">Example project focus</span>
+              <h2>HVAC Website and Local Visibility Foundation</h2>
+              <p>
+                A focused starting point for HVAC companies that need clearer
+                service pages, stronger local presentation, and basic inquiry
+                tracking.
+              </p>
+              <ul className={styles.offerList}>
+                <li>Conversion-focused core website</li>
+                <li>Emergency AC repair page</li>
+                <li>AC replacement and financing pages</li>
+                <li>Maintenance-plan landing page</li>
+                <li>Google Business Profile alignment</li>
+                <li>Call, form, and search tracking setup</li>
+              </ul>
+            </div>
+            <div className={styles.offerPrice}>
+              <p>Built around your priorities</p>
+              <h3>Custom Project Scope</h3>
+              <div className={styles.offerPriceCopy}>
+                After reviewing your current website, services, and goals, we
+                provide a clear project plan and fixed proposal. Founding-client
+                pricing may be available for select contractor businesses.
+              </div>
+              <Link
+                href="/free-website-review"
+                className="button button-secondary"
+              >
+                Request a Free Website Review
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section" style={{ background: "var(--cream)" }}>
+        <div className="site-container">
+          <div className="section-heading">
+            <span className="eyebrow">Industry-specific by design</span>
+            <h2>Different trades. Different calls. Different pages.</h2>
+            <p>
+              A homeowner with a broken AC is not thinking like someone planning
+              a roof replacement. Your website should respect that.
+            </p>
+          </div>
+          <div className={styles.industryGrid}>
+            <article className={styles.industryCard}>
+              <span>Priority vertical</span>
+              <h3>HVAC</h3>
+              <p>
+                Emergency repair, replacement, financing, maintenance plans,
+                heating, and indoor-air-quality demand.
+              </p>
+            </article>
+            <article className={styles.industryCard}>
+              <span>High-intent local demand</span>
+              <h3>Plumbing</h3>
+              <p>
+                Emergency calls, drain and sewer work, water heaters, repipes,
+                leaks, and location-specific service pages.
+              </p>
+            </article>
+            <article className={styles.industryCard}>
+              <span>High-value considered jobs</span>
+              <h3>Roofing</h3>
+              <p>
+                Repairs, replacements, storm-related demand, financing, and a
+                trust-heavy estimate journey.
+              </p>
+            </article>
+          </div>
+          <div className={styles.buttonRow} style={{ marginTop: "34px" }}>
+            <Link href="/industries" className="button button-secondary">
+              Explore Your Industry
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="site-container">
+          <div className="section-heading">
+            <span className="eyebrow">How we work</span>
+            <h2>Clear priorities before more marketing activity.</h2>
+          </div>
+          <div className={styles.process}>
+            <article className={styles.processItem}>
+              <h3>Review the leaks</h3>
+              <p>
+                Audit your website, local presence, pages, offers, and lead path.
+              </p>
+            </article>
+            <article className={styles.processItem}>
+              <h3>Set the job targets</h3>
+              <p>
+                Decide which services and service areas deserve the first push.
+              </p>
+            </article>
+            <article className={styles.processItem}>
+              <h3>Build the essentials</h3>
+              <p>
+                Create the priority pages, tracking, and local-search setup.
+              </p>
+            </article>
+            <article className={styles.processItem}>
+              <h3>Improve what works</h3>
+              <p>
+                Use website, search, and inquiry data to decide what to update
+                next.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-compact">
+        <div className={`site-container ${styles.finalCta}`}>
+          <div>
+            <span className="eyebrow">Start with clarity</span>
+            <h2>Find out what is costing your company calls.</h2>
+            <p>
+              Get three priority fixes and a practical next step by email within
+              two business days. Daniel reviews your website personally.
+            </p>
+          </div>
+          <Link
+            href="/free-website-review"
+            className="button button-light"
+          >
+            Request My Free Review
+          </Link>
+        </div>
+      </section>
     </>
   );
 };
-
-// function Item(item: Item) {
-//   return (
-//     <Section bg="light">
-//       <h2>{item.name}</h2>
-//       <p>{item.description}</p>
-
-//       <Link href={item.link}>View Case Study</Link>
-//     </Section>
-//   );
-// }
 
 export default Home;

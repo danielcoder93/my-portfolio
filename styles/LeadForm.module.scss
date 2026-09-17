@@ -1,0 +1,112 @@
+.form {
+  display: flex;
+  padding: clamp(24px, 5vw, 48px);
+  border: 1px solid #e3ded5;
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  box-shadow: var(--shadow-lg);
+  flex-direction: column;
+  gap: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.form label {
+  display: flex;
+  color: var(--ink);
+  font-size: 0.86rem;
+  font-weight: 800;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form input,
+.form select,
+.form textarea {
+  width: 100%;
+  border: 1px solid #cfc8bd;
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  background: var(--paper);
+  font-size: 1rem;
+}
+
+.form input,
+.form select {
+  min-height: 52px;
+  padding: 0 14px;
+}
+
+.form textarea {
+  min-height: 130px;
+  padding: 13px 14px;
+  resize: vertical;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  border-color: var(--accent);
+  outline: 3px solid rgba(240, 90, 53, 0.16);
+}
+
+.form button {
+  align-self: flex-start;
+  border: 0;
+  cursor: pointer;
+}
+
+.form button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.disclaimer {
+  max-width: 630px;
+  font-size: 0.82rem;
+}
+
+.success,
+.error {
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+}
+
+.success {
+  color: var(--success);
+  background: #eaf7f0;
+}
+
+.error {
+  color: var(--error);
+  background: #fff0ee;
+}
+
+.honeypot {
+  position: absolute;
+  left: -9999px;
+}
+
+@media (max-width: 680px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form button {
+    width: 100%;
+  }
+}
+
+.fields { display: flex; min-width: 0; padding: 0; margin: 0; border: 0; flex-direction: column; gap: 20px; }
+.formTitle { margin-bottom: 12px; font-size: clamp(1.4rem, 3vw, 1.9rem); }
+.optional { padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.optional summary { cursor: pointer; font-weight: 700; font-size: 0.9rem; }
+.optional[open] summary { margin-bottom: 20px; }
+.offerNote { padding: 14px; border-radius: 12px; background: var(--cream); font-size: 0.9rem; }
+.feedback:empty { display: none; }
+.success p { color: inherit; margin-top: 14px; overflow-wrap: anywhere; }
